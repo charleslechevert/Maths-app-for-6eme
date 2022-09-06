@@ -1,0 +1,63 @@
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header {
+    background-color: black;
+    height: 20vh;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    width: 40%;
+    box-sizing: border-box;
+    border : 1px solid black;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 3rem 0;
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: burlywood;
+}
+
+.menu__start {
+    font-size: 2rem;
+    color: darkred;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+
+.menu__score {
+    font-size: 2rem;
+    color: darkred;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    
+}
+
+.menu__countdown {
+    font-size: 2rem;
+    color: darkred;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+
+

@@ -1,0 +1,7 @@
+#Scénario
+L'histoire d'un pirate en POV qui doit trouver un trésor.
+
+#les nombres décimaux
+a. jeu grille:partir d'un point a à b 
+b. Jeu duel : trouver le plus grand nombre décimal ou le plus petit
+c. flappy bird : le nombre de coup que le joueur peut faire est déterminé par un jeu mathématique à définir. 
