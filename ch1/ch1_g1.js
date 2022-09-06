@@ -9,8 +9,6 @@ var random3 = 0;
 var random4 = 0;
 
 
-for(let i=0,)
-Math.floor((Math.random()) * 3)
 
 
 
