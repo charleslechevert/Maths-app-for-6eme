@@ -30,3 +30,4 @@ document.getElementById("random_digit7").innerHTML = values[randomValue];
 function reset() {
 
 }
+
