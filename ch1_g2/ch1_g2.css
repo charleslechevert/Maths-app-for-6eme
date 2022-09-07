@@ -42,7 +42,7 @@ html {
 .main {
     width:100vw;
     height: 100vh;
-    background-image: url('sea2.png');
+    background-image: url('sea3.png');
     background-size: 100% auto;
     background-position:bottom;
 
@@ -57,7 +57,8 @@ html {
     justify-content: space-around;
     position:relative;
     top: 500px;
-    animation: block 3s infinite linear;
+    animation: none;
+    
 }
 
 @keyframes block{

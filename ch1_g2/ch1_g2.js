@@ -4,6 +4,7 @@ var digit = [];
 var digitAnswer = [false,false,false,false,false,false,false];
 var countScore =0;
 var clicked = [false,false,false,false,false,false,false];
+var state = false;
 
 /*Generate all the digits */
 for(let i =1;i<8;i++) {
@@ -13,26 +14,7 @@ for(let i =1;i<8;i++) {
 }
 console.log(digit)
 
-/*Check if it is a useless zero. return array */
-if (digit[0] == 0) {
-    digitAnswer[0] = true;
-    if (digit[1] == 0) {
-        digitAnswer[1] = true;
-    }
-} 
 
-if (digit[6] == 0) {
-    digitAnswer[6] = true;
-    if (digit[5] == 0) {
-        digitAnswer[5] = true;
-        if (digit[4] == 0) {
-            digitAnswer[4] = true;
-            if (digit[3] == 0) {
-                digitAnswer[3] = true;
-            }
-        }
-    }
-} 
 /* Manage the first digit */
 function getvalue1() {
     var playerDigit = 0;
@@ -47,8 +29,8 @@ function getvalue1() {
             document.getElementById("random_digit1").style.color = 'darkred';
         }
     }
-    console.log(countScore)
-    clicked[0] = true;
+    document.getElementById("score").innerHTML = countScore;
+
 }
 
 /* Manage the second digit */
@@ -65,8 +47,7 @@ function getvalue2() {
             document.getElementById("random_digit2").style.color = 'darkred';
         }
     }
-    console.log(countScore)
-    clicked[1] = true;
+    document.getElementById("score").innerHTML = countScore;
 }
 
 /* Manage the third digit */
@@ -77,8 +58,7 @@ function getvalue3() {
         countScore--;
         document.getElementById("random_digit3").style.color = 'darkred';
     }
-    console.log(countScore)
-    clicked[1] = true;
+    document.getElementById("score").innerHTML = countScore;
 }
 
 /* Manage the 4th digit */
@@ -95,8 +75,7 @@ function getvalue4() {
             document.getElementById("random_digit4").style.color = 'darkred';
         }
     }
-    console.log(countScore)
-    clicked[3] = true;
+    document.getElementById("score").innerHTML = countScore;
 }
 
 /* Manage the 5th digit */
@@ -113,8 +92,7 @@ function getvalue5() {
             document.getElementById("random_digit5").style.color = 'darkred';
         }
     }
-    console.log(countScore)
-    clicked[4] = true;
+    document.getElementById("score").innerHTML = countScore;
 }
 
 /* Manage the 6th digit */
@@ -131,8 +109,7 @@ function getvalue6() {
             document.getElementById("random_digit6").style.color = 'darkred';
         }
     }
-    console.log(countScore)
-    clicked[5] = true;
+    document.getElementById("score").innerHTML = countScore;
 }
 
 
@@ -150,14 +127,40 @@ function getvalue7() {
             document.getElementById("random_digit7").style.color = 'darkred';
         }
     }
-    console.log(countScore)
-    clicked[6] = true;
+    document.getElementById("score").innerHTML = countScore;
+
 }
 
 
 
 /*Reset new number */
+
 function reset() {
+
+    /*Generate all the digits */
+    for(let i =1;i<8;i++) {
+        randomValue = Math.floor(Math.random()*18);
+        document.getElementById("random_digit" + i).innerHTML = values[randomValue];
+        digit[i-1]= values[randomValue];
+    }
+
+    clicked = [false,false,false,false,false,false,false];
+    document.getElementById("random_digit1").style.color = 'black';
+    document.getElementById("random_digit1").style.backgroundImage = "none";
+    document.getElementById("random_digit2").style.color = 'black';
+    document.getElementById("random_digit2").style.backgroundImage = "none";
+    document.getElementById("random_digit3").style.color = 'black';
+    document.getElementById("random_digit3").style.backgroundImage = "none";
+    document.getElementById("random_digit4").style.color = 'black';
+    document.getElementById("random_digit4").style.backgroundImage = "none";
+    document.getElementById("random_digit5").style.color = 'black';
+    document.getElementById("random_digit5").style.backgroundImage = "none";
+    document.getElementById("random_digit6").style.color = 'black';
+    document.getElementById("random_digit6").style.backgroundImage = "none";
+    document.getElementById("random_digit7").style.color = 'black';
+    document.getElementById("random_digit7").style.backgroundImage = "none";
+
+
 
 }
 
@@ -165,13 +168,20 @@ function reset() {
 
 var countdown = 30;
 function startGame() {
-    setInterval(timer,1000);
-    reset();
+    if (state==false) { //state manage the fact you can only once press start
+        state = true;
+        document.getElementById('start').style.color = 'transparent';
+        document.getElementById('number').style.animation="block 3s infinite linear";
+        setInterval(timer,1000);
+        setInterval(reset,3000);
+        reset();
+    }
 
 }
 
 function timer() {
     document.getElementById('countdown').innerHTML = countdown;
+
     if (countdown==0) {
         clearInterval(timer);
         alert("Gamer Over. Score: " + countScore);

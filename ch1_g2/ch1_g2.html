@@ -14,14 +14,14 @@
 <body>
     <header>
         <div class="menu">
-            <p class="menu__start" onclick="startGame()">Start</p>
+            <p class="menu__start" id="start" onclick="startGame()">Start</p>
             <p class="menu__score" id="score">Score</p>
             <p class="menu__countdown" id="countdown">30</p>
         </div>
     </header>
 
     <main class="main">
-        <div class="number-container">
+        <div class="number-container" id="number">
             <article class="digit" id="random_digit1" onclick="getvalue1()">
                 <p>?</p>
             </article>
