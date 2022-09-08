@@ -7,60 +7,38 @@ var random1 = 0;
 var random2 = 0;
 var random3 = 0;
 var random4 = 0;
+var values = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,2];
+var digit = [0,0,0,0,0,0]
+var numberFloat = [0,0,0,0]
+var numberString = 0;
 
 
 
-
-
-
-/* Initialise les nombres au départ 
-number1 = document.getElementById("random_value1");
-number2 =  document.getElementById("random_value2");
-number3 = document.getElementById("random_value3");
-number4 = document.getElementById("random_value4");
-
-console.log(document.getElementById("random_value1"));
-
-var random1 = (Math.random())*10;
-number1.innerHTML = random1;
-
-var random2 = (Math.random())*10;
-number2.innerHTML = random2;
-
-var random3 = (Math.random())*10;
-number3.innerHTML = random3;
-
-var random4 = (Math.random())*10;
-number4.innerHTML = random4;
-
-var random_list = [random1,random2,random3,random4]
-var correctAnswer = Math.max(...random_list) */
 
 
 
 /*Create random number to be put in the box */
 function reset() {
 
-    number1 = document.getElementById("random_value1")
-    number2 = document.getElementById("random_value2")
-    number3 = document.getElementById("random_value3")
-    number4 = document.getElementById("random_value4")
+    for(let j=1;j<5;j++) {
 
+        digit = [0,0,0,0,0,0,0]
+        for(let i =1;i<7;i++) {
+            randomValue = Math.floor(Math.random()*18);   
+            digit[i-1]= values[randomValue];
+        }
+        digit.splice(3,0,".");
+        numberString = digit.join("");
+        numberFloat[j-1] = parseFloat(numberString)
+        console.log(digit)
+        document.getElementById("random_value" + j).innerHTML= numberString;
+    
+    
+    
+        
+        correctAnswer = Math.max(...numberFloat)
 
-    random1 = (Math.random())*10;
-    number1.innerHTML = random1;
-
-    random2 = (Math.random())*10;
-    number2.innerHTML = random2;
-
-    random3 = (Math.random())*10;
-    number3.innerHTML = random3;
-
-    random4 = (Math.random())*10;
-    number4.innerHTML = random4;
-
-    random_list = [random1,random2,random3,random4]
-    correctAnswer = Math.max(...random_list)
+    }
     
 }
 

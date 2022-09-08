@@ -1,0 +1,122 @@
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(42, 40, 38);
+    
+}
+
+.menu__start {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+
+.menu__score {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    
+}
+
+.menu__countdown {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.main {
+    height:100vh;
+    overflow: hidden;
+    background-image:  url('ch1_g3_background.jpg');
+    background-size: cover;
+
+}
+
+
+
+.main__numbers {
+    animation: slide-bottom 30s linear infinite;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top:-300vh;
+    left:35vw;
+    position:relative;
+    height: 300vh;
+
+}
+
+.ladder-stick {
+    width: 50%;
+    position: relative;
+    
+}
+    
+
+
+    
+
+
+@keyframes slide-bottom {
+    from {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+      }
+      to {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+      }
+    
+
+}
+
+.number__ladder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width:65vw;
+    z-index: 1000;
+
+}
+
+.ladder__container {
+    width:80%;
+
+}
+
+.ladder {
+    width: 100%;
+
+    
+}
+
+.ladder-stick__img {
+    position: fixed;
+    width: 50%;
+}
+
+.number {
+    color: aqua;
+    width:20%;
+    padding-left:1rem;
+    font-size: 1.5rem;
+
+}
+
+

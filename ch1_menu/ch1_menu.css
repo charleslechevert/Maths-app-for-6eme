@@ -1,0 +1,69 @@
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.menu {
+    background-color: rgb(36, 35, 35);
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    color : white;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    font-size: 2rem;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    height: 100vh;
+    background-image:  url('background_menugame.jpg');
+    background-size: cover;
+}
+
+.game {
+    padding:1rem;
+    margin: 1rem;
+    background-color: rgba(122, 122, 124, 0.5);
+    color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.game__title {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 3rem;
+
+}
+
+.game__text {
+    width: 60%;
+
+}
+
+.game__descr {
+    text-align: right;
+    font-size: 1.3rem;
+}
+
+.game__logo {
+    width: 40%;
+    
+
+}
+
+.logo__img {
+    width:50%;
+    min-width:100px;
+    height: auto;
+}
