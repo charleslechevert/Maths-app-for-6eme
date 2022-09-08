@@ -47,6 +47,41 @@ html {
 
 }
 
+.main__parrots {
+    width:35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:2rem;
+    height:80vh;
+}
+
+.parrot__container {
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.parrot__img-container {
+    width: 80%
+}
+
+.parrot__img {
+    width: 100%;
+
+
+}
+
+.parrot__number {
+    text-align: center;
+    color: black;
+    font-family: 'Fruktur', cursive;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
+    font-size: 1.4rem;
+
+}
 
 
 .main__numbers {
@@ -112,11 +147,12 @@ html {
 }
 
 .number {
-    color: aqua;
+    color: black;
     width:20%;
     padding-left:1rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    font-family: 'Fruktur', cursive;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
 
 }
-
 
