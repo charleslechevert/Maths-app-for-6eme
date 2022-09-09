@@ -157,6 +157,13 @@ html {
 
 }
 
+#number--hidden {
+    color: transparent;
+    -webkit-text-stroke: none;
+    font-family: 'Fruktur', cursive;
+    -webkit-text-stroke: 0px rgb(202, 80, 80);
+}
+
 .parrot__img-onladder {
 
     position: absolute;
