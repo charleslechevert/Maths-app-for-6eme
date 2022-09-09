@@ -137,6 +137,7 @@ html {
 
 .ladder {
     width: 100%;
+    position: relative;
 
     
 }
@@ -156,3 +157,14 @@ html {
 
 }
 
+.test {
+
+    position: absolute;
+    z-index:1000;
+    left:11vw;
+    width: 25%;
+
+
+    
+    
+}

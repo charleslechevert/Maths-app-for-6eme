@@ -27,7 +27,7 @@
 
             <div class="parrot__container" id="parrotContainer1" onclick="getValue1()">
                 <div class="parrot__img-container">
-                    <img class="parrot__img"src="parrot1.png"  alt="">
+                    <img class="parrot__img"src="parrot1.png"  alt="" draggable="true" ondragstart="drag(event)" id="drag1">
                 </div>
                 <p class="parrot__number" id="parrot1"  >hey salut</p>
             </div>
@@ -67,6 +67,7 @@
             <div class="number__ladder">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
+                        
                 </div>
                 <p class="number">3</p>
             </div>
@@ -136,7 +137,7 @@
 
             <div class="number__ladder">
                 <div class="ladder__container">
-                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                    <img class="ladder" src="ladder-1.png" alt="ladder" >
                 </div>
                 <p class="number">1</p>
             </div>
@@ -145,35 +146,36 @@
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
-                <p class="number">_</p>
+                <p class="number">0.8</p>
             </div>
 
             <div class="number__ladder">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
-                <p class="number">_</p>
+                <p class="number">0.6</p>
             </div>
 
             <div class="number__ladder">
                 <div class="ladder__container">
-                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                    <img class="ladder" src="ladder-1.png" alt="ladder" >
                 </div>
-                <p class="number">_</p>
+                <p class="number">0.4</p>
             </div>
 
             <div class="number__ladder">
                 <div class="ladder__container">
-                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                    <img class="ladder" src="ladder-1.png" alt="ladder" >
+
                 </div>
-                <p class="number" onclick="getValue()">_</p>
+                <p class="number">0.2</p>
             </div>
 
-            <div class="number__ladder">
+            <div class="number__ladder" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div class="ladder__container">
-                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                    <img class="ladder" src="ladder-1.png" alt="ladder">       
                 </div>
-                <p class="number" onclick="getValue2()">0</p>
+                <p class="number">0</p>
             </div>
 
             
