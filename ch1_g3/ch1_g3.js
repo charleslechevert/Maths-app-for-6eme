@@ -1,6 +1,7 @@
 var number = [0,0.2,0.4,0.6,0.8,1,1.2,1.4,1.6,1.8,2,2.2,2.4,2.6,2.8,3]
 var playerDigit = 4
 var test = true;
+var countScore = 0;
 
 
 // Generate random numbers associated to parrots
@@ -64,8 +65,44 @@ function allowDrop(ev) {
     ev.currentTarget.append(document.getElementById(data));
     document.getElementById(data).classList.remove('parrot__img');
     document.getElementById(data).classList.add('parrot__img-onladder');
+
+    //manage the score
+
+    countScore++;
+    document.getElementById('score').textContent = countScore;
+
+
   
  }
 
+}
+
+
+/*startGame */
+
+var countdown = 30;
+function startGame() {
+    state = false;
+    if (state==false) { //state manage the fact you can only once press start
+        state = true;
+        document.getElementById('start').style.color = 'transparent';
+        document.querySelector('.main__numbers').style.animation="slide-bottom 30s linear infinite";
+        setInterval(timer,1000);
+    }
+
+}
+
+/*Manage time */
+
+function timer() {
+    document.getElementById('countdown').innerHTML = countdown;
+
+    if (countdown==0) {
+        clearInterval(timer);
+        alert("Gamer Over. Score: " + countScore);
+        location.reload();
+
+    }
+    countdown--;
 }
 

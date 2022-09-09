@@ -85,7 +85,6 @@ html {
 
 
 .main__numbers {
-    animation: slide-bottom 30s linear infinite;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
