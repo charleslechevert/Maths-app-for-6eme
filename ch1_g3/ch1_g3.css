@@ -157,11 +157,12 @@ html {
 
 }
 
-.test {
+.parrot__img-onladder {
 
     position: absolute;
     z-index:1000;
     left:11vw;
+    bottom:5vh;
     width: 25%;
 
 

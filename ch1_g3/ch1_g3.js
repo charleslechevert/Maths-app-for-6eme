@@ -30,8 +30,13 @@ function allowDrop(ev) {
  function drop(ev) {
    ev.preventDefault();
    var data = ev.dataTransfer.getData("text");
-   console.log(data)
-   ev.target.appendChild(document.getElementById(data));
+   console.log(document.getElementById(data));
+   console.log(ev.currentTarget)
+
+   ev.currentTarget.insertBefore(document.getElementById(data), document.getElementById('testing'));
+   //ev.target.append(document.getElementById(data));
+   document.getElementById(data).classList.remove('parrot__img');
+   document.getElementById(data).classList.add('parrot__img-onladder');
  }
 
 
