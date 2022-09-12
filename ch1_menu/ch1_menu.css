@@ -4,7 +4,7 @@ html {
 }
 
 .menu {
-    background-color: rgb(36, 35, 35);
+    background-color: var(--header-color);
     height: 20vh;
     display: flex;
     flex-direction: row;
@@ -12,7 +12,6 @@ html {
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
-    border-bottom: 1px solid white;
     font-size: 2rem;
 
 }
@@ -23,7 +22,6 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
-    height: 100vh;
     background-image:  url('background_menugame.jpg');
     background-size: cover;
 }

@@ -61,21 +61,80 @@ function allowDrop(ev) {
 
     //drag and drop - don't touch
     ev.preventDefault();
-    
     ev.currentTarget.append(document.getElementById(data));
+
+
     document.getElementById(data).classList.remove('parrot__img');
     document.getElementById(data).classList.add('parrot__img-onladder');
 
     //manage the score
-
     countScore++;
     document.getElementById('score').textContent = countScore;
 
+    //manage new parrot 
+
+    if (data=='drag1') {
+      var randomNumber = Math.floor(Math.random()*16);
+
+      var elem = document.createElement("img");
+
+      elem.setAttribute("src", 'parrot1.png');
+      elem.setAttribute("class","parrot__img-container");
+      elem.setAttribute("draggable","true")
+      elem.setAttribute("ondragstart","drag(event)")
+      elem.setAttribute("id","drag1")
+      document.getElementById("parrotContainer1").prepend(elem);
+      document.getElementById('parrot1').innerHTML = number[randomNumber];
+
+    } 
+
+    if (data=='drag2') {
+      var randomNumber = Math.floor(Math.random()*16);
+
+      var elem = document.createElement("img");
+      elem.setAttribute("src", 'parrot2.png');
+      elem.setAttribute("class","parrot__img-container");
+      elem.setAttribute("draggable","true")
+      elem.setAttribute("ondragstart","drag(event)")
+      elem.setAttribute("id","drag2")
+      document.getElementById("parrotContainer2").prepend(elem);
+      document.getElementById('parrot2').innerHTML = number[randomNumber];
+    }
+
+    if (data=='drag3') {
+      var randomNumber = Math.floor(Math.random()*16);
+
+      var elem = document.createElement("img");
+      elem.setAttribute("src", 'parrot3.png');
+      elem.setAttribute("class","parrot__img-container");
+      elem.setAttribute("draggable","true")
+      elem.setAttribute("ondragstart","drag(event)")
+      elem.setAttribute("id","drag3")
+      document.getElementById("parrotContainer3").prepend(elem);
+      document.getElementById('parrot3').innerHTML = number[randomNumber];
+    }
+
+    if (data=='drag4') {
+      var randomNumber = Math.floor(Math.random()*16);
+
+      var elem = document.createElement("img");
+      elem.setAttribute("src", 'parrot4.png');
+      elem.setAttribute("class","parrot__img-container");
+      elem.setAttribute("draggable","true")
+      elem.setAttribute("ondragstart","drag(event)")
+      elem.setAttribute("id","drag4")
+      document.getElementById("parrotContainer4").prepend(elem);
+      document.getElementById('parrot4').innerHTML = number[randomNumber];
+    }
+  
+  
 
   
  }
 
 }
+
+
 
 
 /*startGame */

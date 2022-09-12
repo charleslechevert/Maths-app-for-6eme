@@ -1,0 +1,37 @@
+html {
+  
+    font-family: 'Roboto Condensed', sans-serif;
+    --header-color: rgb(66, 66, 70);
+  
+    
+}
+
+.menu {
+    background-color: var(--header-color);
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    color : white;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu__continue {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+
+.menu__back {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    
+}
