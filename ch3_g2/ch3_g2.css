@@ -45,7 +45,8 @@ html {
 /*MAIN______________________________________________________*/
 
 main {
-    background-color: aqua;
+    background-image: url('background.jpg');
+    background-size:cover; 
     height: 90vh; /*Not 100 because header is taking already 10 */
     display: flex;
     flex-direction: column;
@@ -58,13 +59,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    left:-7000vw;
+    left:-1500vw;
     position:relative;
-    width: 7000vw;
-    animation : slide-right 500s linear infinite;
+    width: 1500vw;
+    animation : slide-right 100s linear infinite;
     overflow: hidden;
-    margin-top:5vh;
-    margin-bottom: 5vh;
+
 
 }
 
@@ -92,6 +92,7 @@ body {
     background-size: cover;
     font-size: 6vh;
     font-family: 'Nabla', cursive;
+    
 
 }
 
@@ -124,13 +125,12 @@ body {
 .sprite-img {
     height: 12vh;
     width:12vh;
-    
 
 
 }
 
 .multiple__text {
-    font-size:4vw;
+    font-size:4vh;
     color: black;
     text-transform: uppercase;
     font-family: 'Nabla', cursive;
@@ -140,7 +140,7 @@ body {
 
 .multiple__number {
     font-family: 'Nabla', cursive;
-    font-size: 25vw;
+    font-size: 10vh;
     text-align: center;
 }
 
