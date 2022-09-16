@@ -44,12 +44,18 @@ html {
     
 }
 
+/*MAIN_____________________________________________________________*/
+main {
+    display: flex;
+    flex-direction: column;
+    height:90vh;
+}
+
 
 
 /* GRID____________________________________________________________________*/
 
 .grid {
-    margin-top: 1rem;
     background-image: url('background.jpg');
     background-size: cover;
 
@@ -69,13 +75,41 @@ html {
     box-sizing: border-box;
     background-image: url('pavement.png');
     background-size: cover;
-    font-family: 'Nabla', cursive;
+    font-family: 'Bungee Spice', cursive;
     text-align: center;
-    font-size: 9vw;
+    font-size: 8vw;
+    vertical-align: middle;
+    
 
 }
 
 .sprite {
     height: 12vw;
     width: 12vw;
+}
+
+/*INFO_________________________________________*/
+
+.info {
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+
+.divisor__descr {
+    text-align:  center;
+    font-size: 4vh;
+    font-family: 'Bungee Spice', cursive;
+}
+
+.divisor__number {
+    margin-top: 5vh;
+    text-align: center;
+    font-size:8vh;
+    font-family: 'Bungee Spice', cursive;
+
 }

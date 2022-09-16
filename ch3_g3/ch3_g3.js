@@ -46,7 +46,7 @@ app = {
         // Je réinitialise le contenu dans invaderElm. En gros je supprimer la grille qui se situe dedans
         app.gridElm.textContent = '';
     
-        for(let rowNumber = 0; rowNumber < gridSize; rowNumber++) {
+        for(let rowNumber = 0; rowNumber < 10; rowNumber++) {
         // Je vais créer mes lignes
         // Je créer mon élément
           const rowElm = document.createElement('div');
@@ -77,7 +77,7 @@ app = {
         
       },
       placeSprite() {
-        var lastRow = document.querySelectorAll(".row")[7]; //Select last row
+        var lastRow = document.querySelectorAll(".row")[9]; //Select last row
         var startCell = lastRow.querySelectorAll(".cell")[3]; //Select the cell where the sprite will always start
         var createSprite = document.createElement('img');
         createSprite.classList.add('sprite')
@@ -142,7 +142,6 @@ app = {
     moveSprite(event) {
         if (event.target.textContent != '' && event.target.textContent % app.divisor == 0) {
             event.target.textContent = ''
-            event.target.style.backgroundImage = 'none'
 
             app.countScore++; //up the score
             document.getElementById('score').textContent = app.countScore //display new score
@@ -152,7 +151,8 @@ app = {
             document.getElementById(app.rightPosition).textContent = ""
             document.getElementById(app.leftPosition).textContent = ""
             event.target.append(document.querySelector('.sprite'))
-            app.generateNearNumber()
+            app.endOfGrid() // check if the sprite is not in the last row
+            app.generateNearNumber() // generate new numbers to display
         }
 
         else if (event.target.textContent != '') {
@@ -164,20 +164,20 @@ app = {
 
             setTimeout(() => event.target.style.backgroundImage = "url(pavement.png)", 800) //create vortex effect if wrong
             
-        
-
-
         }
-
-
-        
-        
     },
     generateDivisor () {
         app.divisor = Math.ceil(Math.random()*10 + 1)
         document.querySelector('.divisor__number').textContent = app.divisor
         console.log(app.divisor)
-    }
+    },
+    endOfGrid() {
+        if (document.querySelector('.sprite').parentElement.id < 9) {
+            var startPosition = document.getElementById('75')
+            startPosition.append(document.querySelector('.sprite'))
+
+        }
+    },
 
 }
 
