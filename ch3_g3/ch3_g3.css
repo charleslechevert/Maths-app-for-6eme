@@ -1,0 +1,71 @@
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(42, 40, 38);
+    width: 100%;
+    z-index:1000000;
+
+    
+}
+
+.menu__start {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+
+.menu__score {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    
+}
+
+.menu__countdown {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    
+}
+
+/* GRID____________________________________________________________________*/
+
+.grid {
+    margin-top: 1rem;
+
+}
+
+.row{
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.cell {
+    border: 1px solid black;
+    width: 12.5vw;
+    height: 12.5vw;
+    box-sizing: border-box;
+}
+
+.sprite {
+    height: 12vw;
+    width: 12vw;
+}
