@@ -44,10 +44,14 @@ html {
     
 }
 
+
+
 /* GRID____________________________________________________________________*/
 
 .grid {
     margin-top: 1rem;
+    background-image: url('background.jpg');
+    background-size: cover;
 
 }
 
@@ -59,10 +63,16 @@ html {
 }
 
 .cell {
-    border: 1px solid black;
+    
     width: 12.5vw;
     height: 12.5vw;
     box-sizing: border-box;
+    background-image: url('pavement.png');
+    background-size: cover;
+    font-family: 'Nabla', cursive;
+    text-align: center;
+    font-size: 9vw;
+
 }
 
 .sprite {
