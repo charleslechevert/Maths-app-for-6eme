@@ -9,8 +9,8 @@ app = {
 
     },
     story() {
-        document.getElementById('story').textContent = 'Le captaine ne se souvient plus de ses derniers jours en mer...'
-        app.text = ["Une terrible tempête s'est abbatue au large et le voici naufragé sur une île mystérieuse", "Lui et ses perroquets sont les seuls rescapés de son équipage... :'(", "Vite il faut se ressaisir! Le capitaine a atteri sur la très hostile île des nombres décimaux...","Le capitaine a besoin de ton aide","Pour que le capitaine survive, tu vas l'aider à récuperer un maximum de denrées alimentaires!","Choisis les boîtes les plus lourdes en cliquant dessus! Good luck :)"];
+        document.getElementById('story').textContent = `Maintenant, il faut réfléchir afin de trouver une solution pour quitter cette île`
+        app.text = ["Cependant, le capitaine a un léger problème : ses perroquets sont trop turbulents!", "Chaque perroquet possède une place précise sur l'échelle qui mène au mat du bateau" ,"Quand ils sont à leur place, les perroquets sont sages comme des images.", "Aide le perroquet à placer les perroquets sur l'échelle (c'est un peu comme un axe gradué)","Déplace les perroquets et place les au bon endroit sur l'échelle! Good luck ;)"];
         app.counter = 0;
         app.elem = document.getElementById('story');
         var inst = setInterval(app.change, 6000);
@@ -22,7 +22,7 @@ app = {
         app.counter++;
         if (app.counter >= app.text.length) {
 
-            window.location.href = "../ch1/ch1_g1.html";
+            window.location.href = "../ch1_g3/ch1_g3.html";
         }
         
     },
@@ -33,7 +33,7 @@ app = {
         })
 
         document.getElementById('skip').addEventListener('click', (event) => {
-            window.location.href = "../ch1/ch1_g1.html"
+            window.location.href = "../ch1_g3/ch1_g3.html"
 
         })
     }
