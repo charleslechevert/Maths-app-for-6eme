@@ -29,6 +29,7 @@ body p {
   box-shadow: 20px 20px #83af9b;
   font-family: "Baloo 2", cursive;
    border: 1px solid #c8c8a9;
+  margin : 0 10vw;
 }
 body p:after {
   transform: translatey(0px);

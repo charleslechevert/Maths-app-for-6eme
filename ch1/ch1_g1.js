@@ -8,7 +8,6 @@ var random2 = 0;
 var random3 = 0;
 var random4 = 0;
 var values = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,2];
-var digit = [0,0,0,0,0,0]
 var numberFloat = [0,0,0,0]
 var numberString = 0;
 
