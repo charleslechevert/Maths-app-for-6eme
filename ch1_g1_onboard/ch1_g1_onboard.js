@@ -1,1 +1,2 @@
-document.body.insertAdjacentHTML("afterbegin", "<p>Hello,<Br/>World!</p>");
+
+console.log('page is fully loaded');

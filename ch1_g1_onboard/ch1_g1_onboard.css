@@ -1,6 +1,10 @@
+html {
+  font-family: "Baloo 2", cursive;
+}
 
 body {
-  height: 40vh;
+  margin-top: 5vh;
+  height: 60vh;
   margin: 0;
   display: grid;
   place-items: center;
@@ -17,7 +21,7 @@ body p {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 15px;
-  color: #774f38;
+  color: #45403d;
   background-color: #ece5ce;
   padding: 50px;
   border-radius: 11px;
@@ -79,14 +83,31 @@ body p:after {
   }
 }
 
+/*_________________BUTTON + IMG____________________________________*/
 
 
 .img {
     position:absolute;
-    left:-10vh;
-    bottom: -10vh;
+    left: 20vw;
+    bottom: -10vw;
     width: 60vw;
     height: auto;
+    max-width: 400px;
+
 
 }
 
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  width: 30vh;
+  justify-content: space-around;
+
+
+}
+
+.nav {
+  height: 6vh;
+  
+}
