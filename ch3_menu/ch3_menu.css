@@ -20,7 +20,7 @@ a {
 
 }
 
-.menu__start {
+.menu__back {
     color: white;
 }
 
@@ -42,6 +42,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .game__title {

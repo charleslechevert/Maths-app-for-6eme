@@ -25,8 +25,10 @@ function getvalue1() {
             document.getElementById("random_digit1").style.color = 'transparent';
             document.getElementById("random_digit1").style.backgroundImage = "url('coin.png')";
         } else {
-            countScore--;
             document.getElementById("random_digit1").style.color = 'darkred';
+            if(countScore>0) {
+                countScore--;
+            }
         }
     }
     document.getElementById("score").innerHTML = countScore;
@@ -43,8 +45,10 @@ function getvalue2() {
             document.getElementById("random_digit2").style.color = 'transparent';
             document.getElementById("random_digit2").style.backgroundImage = "url('coin.png')";
         } else {
-            countScore--;
             document.getElementById("random_digit2").style.color = 'darkred';
+            if(countScore>0) {
+                countScore--;
+            }
         }
     }
     document.getElementById("score").innerHTML = countScore;
@@ -55,8 +59,10 @@ function getvalue3() {
     var playerDigit = 0;
     playerDigit = event.target.innerHTML;
     if (clicked[2]==false) {
-        countScore--;
         document.getElementById("random_digit3").style.color = 'darkred';
+        if(countScore>0) {
+            countScore--;
+        }
     }
     document.getElementById("score").innerHTML = countScore;
 }
@@ -71,8 +77,10 @@ function getvalue4() {
             document.getElementById("random_digit4").style.color = 'transparent';
             document.getElementById("random_digit4").style.backgroundImage = "url('coin.png')";
         } else {
-            countScore--;
             document.getElementById("random_digit4").style.color = 'darkred';
+            if(countScore>0) {
+                countScore--;
+            }
         }
     }
     document.getElementById("score").innerHTML = countScore;
@@ -88,8 +96,10 @@ function getvalue5() {
             document.getElementById("random_digit5").style.color = 'transparent';
             document.getElementById("random_digit5").style.backgroundImage = "url('coin.png')";
         } else {
-            countScore--;
             document.getElementById("random_digit5").style.color = 'darkred';
+            if(countScore>0) {
+                countScore--;
+            }
         }
     }
     document.getElementById("score").innerHTML = countScore;
@@ -105,8 +115,10 @@ function getvalue6() {
             document.getElementById("random_digit6").style.color = 'transparent';
             document.getElementById("random_digit6").style.backgroundImage = "url('coin.png')";
         } else {
-            countScore--;
             document.getElementById("random_digit6").style.color = 'darkred';
+            if(countScore>0) {
+                countScore--;
+            }
         }
     }
     document.getElementById("score").innerHTML = countScore;
@@ -123,8 +135,10 @@ function getvalue7() {
             document.getElementById("random_digit7").style.color = 'transparent';
             document.getElementById("random_digit7").style.backgroundImage = "url('coin.png')";
         } else {
-            countScore--;
             document.getElementById("random_digit7").style.color = 'darkred';
+            if(countScore>0) {
+                countScore--;
+            }
         }
     }
     document.getElementById("score").innerHTML = countScore;
