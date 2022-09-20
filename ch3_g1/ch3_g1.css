@@ -38,6 +38,13 @@ html {
     padding: 1rem;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .grid {
     display: flex;
     flex-direction: row;
@@ -47,6 +54,7 @@ html {
     padding-top: 5vh;
     padding-bottom: 5vh;
     box-sizing: border-box;
+    max-width: 500px;
 
 
     
@@ -95,7 +103,9 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100vw;
-    height:100%
+    height:100%;
+    justify-content: space-around;
+    
 }
 
 .numberButton{
@@ -119,4 +129,12 @@ html {
 
     
 }
+
+@media (min-width: 500px) {
+    .grid {
+        max-width:500px;
+
+    
+    }
+  }
 
