@@ -56,7 +56,7 @@ app = {
         if(app.playerValue==app.correctAnswer) {
             app.countScore++;
             document.getElementById('score').textContent = app.countScore;
-        } else {
+        } else if (app.countScore > 0) {
             app.countScore--;
             document.getElementById('score').textContent = app.countScore;
         }
