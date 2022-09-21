@@ -34,7 +34,7 @@ app = {
         document.getElementById('countdown').innerHTML = app.countdown;
     
         if (app.countdown==0) {
-            clearInterval(timer);
+            clearInterval(app.timer);
             alert("Gamer Over. Score: " + countScore);
             location.reload();
     
