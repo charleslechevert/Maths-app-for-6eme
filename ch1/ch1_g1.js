@@ -4,14 +4,16 @@ app = {
     correctAnswer : 0,
     countdown : 30,
     playerValue : 0,
+    secondIntervall : '',
     startGame() {
         state=true;
         if (state) {
             document.querySelector('.menu__start').addEventListener('click', () => { 
-            setInterval(app.timer,1000);
+            app.secondIntervall= setInterval(app.timer,1000);
+            app.secondIntervall;
             app.reset();
             app.getvalue();
-            document.querySelector('.menu__start').textContent = ''
+            document.querySelector('.menu__start').textContent = '';
             state=false;
             })
 
@@ -66,7 +68,8 @@ app = {
         var numbers = document.querySelectorAll('.box__number')
         for(let i =0;i<numbers.length;i++) {
             numbers[i].addEventListener('click', (event) => {
-                app.playerValue = event.target.innerHTML
+                app.playerValue = event.currentTarget.innerHTML
+                console.log(event.currentTarget)
                 app.checkValue(app.playerValue, app.correctAnswer);
                 app.reset();
     
@@ -79,11 +82,13 @@ app = {
         document.getElementById("countdown").innerHTML = app.countdown;
         
         if (app.countdown==0) {
-            clearInterval(timer);
-            alert("Game Over. Score : " + app.countScore);
-            location.reload();
+            clearInterval(app.secondIntervall);
+            popup(app.countScore);
+            
+        } else {
+            app.countdown--;
         }
-        app.countdown--;
+        
         
     }
 }

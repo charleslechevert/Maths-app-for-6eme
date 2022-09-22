@@ -2,10 +2,6 @@ html {
     font-family: 'Krona One', sans-serif;
 }
 
-body {
-    width: 100vw;
-}
-
 
 
 .menu {
@@ -14,8 +10,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: rgb(57, 55, 54);
-    height: 10vh;
-    align-items: center;
 }
 
 .menu__start {
@@ -47,11 +41,10 @@ body {
 
 .main {
     width:100vw;
-    height: 90vh;
-    background-color: rgb(220, 238, 251);
+    height: 100vh;
+    background-image: url('sea3.png');
     background-size: 100% auto;
     background-position:bottom;
-    overflow: hidden;
 
 
 }
@@ -63,47 +56,25 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     position:relative;
-    top: 90vh;
+    top: 500px;
     animation: none;
-    margin: 0 2vw;
     
 }
 
 @keyframes block{
-    0%{top:90vh}
-    100%{top:-5vh}
+    0%{top:500px}
+    100%{top:0px}
 }
 
 .digit{
     box-sizing: border-box;
     color: rgb(55, 51, 51);
     font-size: 3rem;
+    font-family: 'Carter One', cursive;
     /*background-image: url('coin.png'); */
     background-size: auto 80%;
     background-repeat: no-repeat;
-    text-shadow: 3px 3px rgba(55, 56, 64, 0.647);
+ 
+
 }
 
-#boat1 {
-    position : absolute;
-    height: 10vh;
-    left:-30vw;
-    bottom : 30vh;
-  
-}
-
-
-#boat2 {
-    position : absolute;
-    height: 10vh;
-    right:0%;
-    bottom: 20vh;
-  
-}
-
-#boat3 {
-    position : absolute;
-    height: 25vh;
-    bottom: 0vh;
-  
-}

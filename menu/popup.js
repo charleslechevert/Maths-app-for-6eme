@@ -36,8 +36,8 @@ function popup(countScore) {
     logo.src = '../menu/logo.png'
     logo.classList.add('logo')
     popup.append(logo)
-    logo.style.height = '25vw'
-    logo.style.width = '25vw'
+    logo.style.height = '15vh'
+    logo.style.width = '15vh'
     logo.style.margin = '0 auto'
 
     const theNav = document.createElement('div') //Create parent div

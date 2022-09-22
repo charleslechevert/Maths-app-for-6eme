@@ -6,6 +6,7 @@ app = {
     countScore : 0,
     countdown:50,
     startState : false,
+    secondIntervall:'',
 
     init() {
         
@@ -19,7 +20,8 @@ app = {
             if ( app.startState==false) { //state manage the fact you can only once press start
                 app.startState = true;
                 document.getElementById('start').style.color = 'transparent';
-                setInterval(app.timer,1000);
+                app.secondIntervall = setInterval(app.timer,1000);
+                app.secondIntervall
 
                 app.createGrid()
                 app.goodAnswer()
@@ -32,12 +34,15 @@ app = {
         document.getElementById('countdown').innerHTML = app.countdown;
     
         if (app.countdown==0) {
-            clearInterval(app.timer);
-            alert("Gamer Over. Score: " + app.countScore);
-            location.reload();
+            clearInterval(app.secondIntervall);
+            popup(app.countScore)
+            return app.timer;
+            //location.reload();
     
+        } else {
+            app.countdown--;
         }
-        app.countdown--;
+        
     },
     createGrid() {
 

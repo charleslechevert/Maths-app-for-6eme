@@ -69,8 +69,16 @@ app = {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
-                    document.querySelector('.character').remove()
-                    popup(app.countScore)
+                    document.querySelector('.boat').src = 'boom.png'
+                    
+                    setTimeout(() => {
+                        document.querySelector('.character').remove()
+                        popup(app.countScore)
+                    }
+                    , 100)
+                    
+                    
+                    
 
                 }
                 
@@ -81,8 +89,13 @@ app = {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
-                    document.querySelector('.character').remove()
-                    popup(app.countScore)
+                    document.querySelector('.boat').src = 'boom.png'
+                    
+                    setTimeout(() => {
+                        document.querySelector('.character').remove()
+                        popup(app.countScore)
+                    }
+                    , 100)
                 }
             }
 
@@ -91,21 +104,36 @@ app = {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
-                    document.querySelector('.character').remove()
-                    popup(app.countScore)
+                    document.querySelector('.boat').src = 'boom.png'
+                    
+                    setTimeout(() => {
+                        document.querySelector('.character').remove()
+                        popup(app.countScore)
+                    }
+                    , 100)
                 }
             }
 
 
 
             if(characterTop<((window.innerHeight/10)-20)) { //manage the fact if the boat touch the top or down it is game over
-                document.querySelector('.character').remove()
-                popup(app.countScore)
+                document.querySelector('.boat').src = 'boom.png'
+                    
+                    setTimeout(() => {
+                        document.querySelector('.character').remove()
+                        popup(app.countScore)
+                    }
+                    , 100)
             }
 
             if((characterTop>(window.innerHeight-40))) { //manage the fact if the boat touch the top or down it is game over
-                document.querySelector('.character').remove()
-                popup(app.countScore)
+                document.querySelector('.boat').src = 'boom.png'
+                    
+                    setTimeout(() => {
+                        document.querySelector('.character').remove()
+                        popup(app.countScore)
+                    }
+                    , 100)
 
             }
         },10)    
