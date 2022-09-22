@@ -11,9 +11,6 @@ app = {
 
         app.startGame()
 
-
-
-
     },
     startGame() {
         document.getElementById('start').addEventListener('click', (event) => {
@@ -138,44 +135,181 @@ app = {
     }, 
     generateNumber() {
 
-        function hello() {
-            var random1 = Math.floor(Math.random()*100) 
-            var random2 = Math.floor(Math.random()*100) 
-            document.querySelector('.operation').textContent = `${random1} + ${random2}` //Get an addition operation
+        randomNumberDecimal = Math.floor(Math.random()*4)
+        console.log(randomNumberDecimal)
 
-            app.answer = random1 +random2;
-
-            var choice1 = random1 + random2;
+        if(randomNumberDecimal==0) { 
+            function noDecimals() {
+                var random1 = Math.floor(Math.random()*100) 
+                var random2 = Math.floor(Math.random()*100) 
+                document.querySelector('.operation').textContent = `${random1} + ${random2}` //Get an addition operation
+    
+                app.answer = random1 +random2;
+    
+                var choice1 = random1 + random2;
+                
+                
+                var arrayOfDigits = Array.from(String(choice1), Number); //We put all the digits in string
+                var randomPosition1 = Math.floor(Math.random()*(arrayOfDigits.length-1)) // we get digit random position inside the number
+                var randomPosition2 = randomPosition1 + 1 //we get second digit random position which is to its right
+    
+                var b = arrayOfDigits[randomPosition1]; //These 3 lines will swap the two digits
+                arrayOfDigits[randomPosition1] = arrayOfDigits[randomPosition2]
+                arrayOfDigits[randomPosition2] = b
+    
+                var choice2 = parseFloat(arrayOfDigits.join('')) //we convert array into a number
+                console.log(choice2)
+    
+                arrayOfDigits = Array.from(String(choice1), Number); //we +1 a random digit
+                arrayOfDigits[Math.floor(Math.random()*(arrayOfDigits.length))]++;
+    
+                var choice3 = parseFloat(arrayOfDigits.join('')) //we convert array into a number
+    
+                choices = [choice1,choice2,choice3] //shake the choices
+                app.shuffle(choices)
+    
+                document.getElementById('n1').textContent = choices[0] //place the choices near the boat
+                document.getElementById('n2').textContent = choices[1]
+                document.getElementById('n3').textContent = choices[2]
+            }
+            noDecimals();
             
-            
-            var arrayOfDigits = Array.from(String(choice1), Number); //We put all the digits in string
-            var randomPosition1 = Math.floor(Math.random()*(arrayOfDigits.length-1)) // we get digit random position inside the number
-            var randomPosition2 = randomPosition1 + 1 //we get second digit random position which is to its right
-
-            var b = arrayOfDigits[randomPosition1]; //These 3 lines will swap the two digits
-            arrayOfDigits[randomPosition1] = arrayOfDigits[randomPosition2]
-            arrayOfDigits[randomPosition2] = b
-
-            var choice2 = parseFloat(arrayOfDigits.join('')) //we convert array into a number
-            console.log(choice2)
-
-            arrayOfDigits = Array.from(String(choice1), Number); //we +1 a random digit
-            arrayOfDigits[Math.floor(Math.random()*(arrayOfDigits.length))]++;
-
-            var choice3 = parseFloat(arrayOfDigits.join('')) //we convert array into a number
-
-            choices = [choice1,choice2,choice3] //shake the choices
-            app.shuffle(choices)
-
-            document.getElementById('n1').textContent = choices[0] //place the choices near the boat
-            document.getElementById('n2').textContent = choices[1]
-            document.getElementById('n3').textContent = choices[2]
         }
-        hello();
-        setInterval(hello,10000);
+
+        if(randomNumberDecimal==1) {
+            function oneDecimals() {
+                var random1 = Math.floor(Math.random()*1000)/10
+                var random2 = Math.floor(Math.random()*1000)/10 
+                console.log(random1)
+                document.querySelector('.operation').textContent = `${random1} + ${random2}` //Get an addition operation
+                app.answer = (random1 +random2).toFixed(1);
+                var choice1 = (random1 + random2).toFixed(1);
+
+                var arrayOfDigits = Array.from(String(choice1),Number); //We put all the digits in string
+                arrayOfDigits = arrayOfDigits.filter(function (value) {
+                    return !Number.isNaN(value);
+                });
+                var randomPosition1 = Math.floor(Math.random()*(arrayOfDigits.length-1)) // we get digit random position inside the number
+                var randomPosition2 = randomPosition1 + 1 //we get second digit random position which is to its right
+                console.log(arrayOfDigits)
+
+                var b = arrayOfDigits[randomPosition1]; //These 3 lines will swap the two digits
+                arrayOfDigits[randomPosition1] = arrayOfDigits[randomPosition2]
+                arrayOfDigits[randomPosition2] = b
+    
+                var choice2 = parseFloat(arrayOfDigits.join(''))/10 //we convert array into a number
+                console.log(choice2)
+
+                arrayOfDigits = Array.from(String(choice1), Number); //we +1 a random digit
+                arrayOfDigits = arrayOfDigits.filter(function (value) {
+                    return !Number.isNaN(value);
+                });
+                arrayOfDigits[Math.floor(Math.random()*(arrayOfDigits.length))]++;
+    
+                var choice3 = parseFloat(arrayOfDigits.join(''))/10 //we convert array into a number
+                console.log(choice3)
+                choices = [choice1,choice2,choice3] //shake the choices
+                app.shuffle(choices)
+
+                document.getElementById('n1').textContent = choices[0] //place the choices near the boat
+                document.getElementById('n2').textContent = choices[1]
+                document.getElementById('n3').textContent = choices[2]
+
+
+            }
+            oneDecimals()
+        }
+
+        if(randomNumberDecimal==2) {
+            function twoDecimals() {
+                var random1 = Math.floor(Math.random()*10000)/100
+                var random2 = Math.floor(Math.random()*10000)/100
+                console.log(random1)
+                document.querySelector('.operation').textContent = `${random1} + ${random2}` //Get an addition operation
+                app.answer = (random1 +random2).toFixed(2);
+                var choice1 = (random1 + random2).toFixed(2);
+
+                var arrayOfDigits = Array.from(String(choice1),Number); //We put all the digits in string
+                arrayOfDigits = arrayOfDigits.filter(function (value) {
+                    return !Number.isNaN(value);
+                });
+                var randomPosition1 = Math.floor(Math.random()*(arrayOfDigits.length-1)) // we get digit random position inside the number
+                var randomPosition2 = randomPosition1 + 1 //we get second digit random position which is to its right
+                console.log(arrayOfDigits)
+
+                var b = arrayOfDigits[randomPosition1]; //These 3 lines will swap the two digits
+                arrayOfDigits[randomPosition1] = arrayOfDigits[randomPosition2]
+                arrayOfDigits[randomPosition2] = b
+    
+                var choice2 = parseFloat(arrayOfDigits.join(''))/100 //we convert array into a number
+                console.log(choice2)
+
+                arrayOfDigits = Array.from(String(choice1), Number); //we +1 a random digit
+                arrayOfDigits = arrayOfDigits.filter(function (value) {
+                    return !Number.isNaN(value);
+                });
+                arrayOfDigits[Math.floor(Math.random()*(arrayOfDigits.length))]++;
+    
+                var choice3 = parseFloat(arrayOfDigits.join(''))/100 //we convert array into a number
+                console.log(choice3)
+                choices = [choice1,choice2,choice3] //shake the choices
+                app.shuffle(choices)
+
+                document.getElementById('n1').textContent = choices[0] //place the choices near the boat
+                document.getElementById('n2').textContent = choices[1]
+                document.getElementById('n3').textContent = choices[2]
+
+
+            }
+            twoDecimals()
+        }
+        if(randomNumberDecimal==3) {
+            function twoDecimals2() {
+                var random1 = Math.floor(Math.random()*100000)/100
+                var random2 = Math.floor(Math.random()*100000)/100
+                console.log(random1)
+                document.querySelector('.operation').textContent = `${random1} + ${random2}` //Get an addition operation
+                app.answer = (random1 +random2).toFixed(2);
+                var choice1 = (random1 + random2).toFixed(2);
+
+                var arrayOfDigits = Array.from(String(choice1),Number); //We put all the digits in string
+                arrayOfDigits = arrayOfDigits.filter(function (value) {
+                    return !Number.isNaN(value);
+                });
+                var randomPosition1 = Math.floor(Math.random()*(arrayOfDigits.length-1)) // we get digit random position inside the number
+                var randomPosition2 = randomPosition1 + 1 //we get second digit random position which is to its right
+                console.log(arrayOfDigits)
+
+                var b = arrayOfDigits[randomPosition1]; //These 3 lines will swap the two digits
+                arrayOfDigits[randomPosition1] = arrayOfDigits[randomPosition2]
+                arrayOfDigits[randomPosition2] = b
+    
+                var choice2 = parseFloat(arrayOfDigits.join(''))/100 //we convert array into a number
+                console.log(choice2)
+
+                arrayOfDigits = Array.from(String(choice1), Number); //we +1 a random digit
+                arrayOfDigits = arrayOfDigits.filter(function (value) {
+                    return !Number.isNaN(value);
+                });
+                arrayOfDigits[Math.floor(Math.random()*(arrayOfDigits.length))]++;
+    
+                var choice3 = parseFloat(arrayOfDigits.join(''))/100 //we convert array into a number
+                console.log(choice3)
+                choices = [choice1,choice2,choice3] //shake the choices
+                app.shuffle(choices)
+
+                document.getElementById('n1').textContent = choices[0] //place the choices near the boat
+                document.getElementById('n2').textContent = choices[1]
+                document.getElementById('n3').textContent = choices[2]
+
+
+            }
+            twoDecimals2()
+        }
+
         
-
-
+        setInterval(app.generateNumber,10000);
+ 
     },
     shuffle(array) {
         let currentIndex = array.length,  randomIndex;

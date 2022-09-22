@@ -57,7 +57,7 @@ html {
 .operation {
     position: absolute;
     top: 11vh;
-    left:30%;
+    width: 100%;
     font-size: 4vh;
     text-align: center;
     color:rgb(57, 54, 54);
@@ -103,49 +103,3 @@ html {
 
 }
 
-/*POP UP______________________ 
-
-@keyframes appear {
-    0%{
-      opacity: 0;
-      transform: translateX(-10px);
-    }
-  }
-
-
-.popup {
-    background-color: rgb(57, 54, 54);
-    width: 75vw;
-    height: 40vh;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: white;
-    animation: appear 350ms ease-in;
-    max-width: 500px;
-    box-shadow: 12px 12px 2px 1px rgba(46, 46, 65, 0.2);
-
-
-}
-
-
-
-.navigation , .again , .back {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-    text-decoration: none;
-    font-size: 2vh;
-}
-
-.finalScore {
-    text-align: center;
-}
-
-*/
