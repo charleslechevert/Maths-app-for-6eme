@@ -8,7 +8,10 @@ app = {
     answer:0,
     startState:false,
     init() {
+
         app.startGame()
+
+
 
 
     },
@@ -69,7 +72,9 @@ app = {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
-                    alert("game oooover.")
+                    document.querySelector('.character').remove()
+                    popup(app.countScore)
+
                 }
                 
             }
@@ -79,7 +84,8 @@ app = {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
-                    alert("game oooover.")
+                    document.querySelector('.character').remove()
+                    popup(app.countScore)
                 }
             }
 
@@ -88,20 +94,22 @@ app = {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
-                    alert("game oooover.")
+                    document.querySelector('.character').remove()
+                    popup(app.countScore)
                 }
             }
 
 
 
             if(characterTop<((window.innerHeight/10)-20)) { //manage the fact if the boat touch the top or down it is game over
-                alert("game over.");
+                document.querySelector('.character').remove()
+                popup(app.countScore)
             }
 
             if((characterTop>(window.innerHeight-40))) { //manage the fact if the boat touch the top or down it is game over
-                alert("game over.");
+                document.querySelector('.character').remove()
+                popup(app.countScore)
 
-                alert("game over.");
             }
         },10)    
 
