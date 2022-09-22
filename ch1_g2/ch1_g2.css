@@ -86,8 +86,8 @@ body {
 
 #boat1 {
     position : absolute;
-    height: 10vh;
-    left:-30vw;
+    width: 40vw;
+    left:-20vw;
     bottom : 30vh;
   
 }
@@ -95,15 +95,16 @@ body {
 
 #boat2 {
     position : absolute;
-    height: 10vh;
-    right:0%;
+    width: 40vw;
+    right:-20vw;
     bottom: 20vh;
   
 }
 
 #boat3 {
     position : absolute;
-    height: 25vh;
+    width: 60vw;
     bottom: 0vh;
+    left:20vw;
   
 }
