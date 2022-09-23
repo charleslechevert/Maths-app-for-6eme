@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="ch1_g3.css">
     <title>Document</title>
     <script src="ch1_g3.js" defer></script>
+    <script src="../menu/popup.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="menu">
-            <p class="menu__start" id="start" onclick="startGame()">Start</p>
+            <p class="menu__start" id="start">Start</p>
             <p class="menu__score" id="score">Score</p>
-            <p class="menu__countdown" id="countdown">30</p>
+            <p class="menu__countdown" id="countdown">40</p>
         </div>
     </header>
 
@@ -25,32 +26,24 @@
 
         <div class="main__parrots">
 
-            <div class="parrot__container">
-                <div class="parrot__img-container" id="parrotContainer1">
-                    <img class="parrot__img"src="parrot1.png"  alt="" draggable="true" ondragstart="drag(event)" id="drag1">
-                </div>
-                <p class="parrot__number" id="parrot1" >hey salut</p>
+            <div class="parrot__container" class='gela'>
+                <img class="parrot__img" src="parrot1.png" id="im1">
+                <p class="parrot__number" id="parrot1">0</p>
             </div>
 
             <div class="parrot__container">
-                <div class="parrot__img-container" id="parrotContainer2">
-                    <img class="parrot__img"src="parrot2.png"  alt="" draggable="true" ondragstart="drag(event)" id="drag2">
-                </div>
-                <p class="parrot__number" id="parrot2" >hey salut</p>
+                <img class="parrot__img"src="parrot3.png" id="im2">
+                <p class="parrot__number" id="parrot2" >0</p>
             </div>
 
             <div class="parrot__container">
-                <div class="parrot__img-container" id="parrotContainer3">
-                    <img class="parrot__img"src="parrot3.png"  alt="" draggable="true" ondragstart="drag(event)" id="drag3">
-                </div>
-                <p class="parrot__number" id="parrot3">hey salut</p>
+                <img class="parrot__img"src="parrot2.png" id="im3">
+                <p class="parrot__number" id="parrot3">0</p>
             </div>
 
             <div class="parrot__container">
-                <div class="parrot__img-container" id="parrotContainer4">
-                    <img class="parrot__img"src="parrot4.png"  alt="" draggable="true" ondragstart="drag(event)" id="drag4">
-                </div>
-                <p class="parrot__number" id="parrot4">hey salut</p>
+                <img class="parrot__img"src="parrot4.png" id="im4">
+                <p class="parrot__number" id="parrot4">0</p>
             </div>
            
             
@@ -64,7 +57,43 @@
                 <img class="ladder-stick__img" src="ladder-2-removebg-preview.png" alt="">
             </div>
 
-            <div class="number__ladder" id="div16" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div21">
+                <div class="ladder__container">
+                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                        
+                </div>
+                <p class="number">4</p>
+            </div>
+
+            <div class="number__ladder" id="div20">
+                <div class="ladder__container">
+                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                </div>
+                <p class="number" id="number--hidden">3.8</p>
+            </div>
+
+            <div class="number__ladder" id="div19">
+                <div class="ladder__container">
+                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                </div>
+                <p class="number" id="number--hidden">3.6</p>
+            </div>
+
+            <div class="number__ladder" id="div18">
+                <div class="ladder__container">
+                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                </div>
+                <p class="number" id="number--hidden">3.4</p>
+            </div>
+
+            <div class="number__ladder" id="div17">
+                <div class="ladder__container">
+                    <img class="ladder" src="ladder-1.png" alt="ladder">
+                </div>
+                <p class="number" id="number--hidden">3.2</p>
+            </div>
+
+            <div class="number__ladder" id="div16">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                         
@@ -72,98 +101,98 @@
                 <p class="number">3</p>
             </div>
 
-            <div class="number__ladder" id="div15" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div15">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">2.8</p>
             </div>
 
-            <div class="number__ladder" id="div14" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div14">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">2.6</p>
             </div>
 
-            <div class="number__ladder" id="div13" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div13">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">2.4</p>
             </div>
 
-            <div class="number__ladder" id="div12" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div12">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">2.2</p>
             </div>
 
-            <div class="number__ladder" id="div11" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div11">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number">2</p>
             </div>
 
-            <div class="number__ladder" id="div10" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div10">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">1.8</p>
             </div>
 
-            <div class="number__ladder" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div9">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">1.6</p>
             </div>
 
-            <div class="number__ladder" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div8">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">1.4</p>
             </div>
 
-            <div class="number__ladder" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div7">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">1.2</p>
             </div>
 
-            <div class="number__ladder" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div6">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder" >
                 </div>
                 <p class="number">1</p>
             </div>
 
-            <div class="number__ladder"  id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder"  id="div5">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">0.8</p>
             </div>
 
-            <div class="number__ladder"  id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder"  id="div4">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
                 </div>
                 <p class="number" id="number--hidden">0.6</p>
             </div>
 
-            <div class="number__ladder"  id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder"  id="div3">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder" >
                 </div>
                 <p class="number" id="number--hidden">0.4</p>
             </div>
 
-            <div class="number__ladder"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder"  id="div2">
                 <div class="ladder__container">
                     <img class="ladder" src="ladder-1.png" alt="ladder" >
 
@@ -172,7 +201,7 @@
             </div>
 
             
-            <div class="number__ladder" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="number__ladder" id="div1">
                 <div class="ladder__container" id="testing">
                     <img class="ladder" src="ladder-1.png" alt="ladder">
  

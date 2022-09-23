@@ -2,6 +2,7 @@
 function popup(countScore) {
 
     window.PointerEvent = 'none'
+    console.log('yo')
 
     const popup = document.createElement('div') //Create parent div
     popup.classList.add('popup') //assign class
@@ -22,6 +23,8 @@ function popup(countScore) {
     popup.style.animation = 'appear 350ms ease-in'
     popup.style.maxWidth = '500px'
     popup.style.boxShadow = '12px 12px 2px 1px rgba(46, 46, 65, 0.2)'
+    popup.style.zIndex = '100000'
+
 
     
 
