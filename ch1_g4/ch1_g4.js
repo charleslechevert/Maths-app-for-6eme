@@ -22,7 +22,6 @@ app = {
                 document.getElementById('start').style.color = 'transparent';
                 app.secondIntervall = setInterval(app.timer,1000);
                 app.secondIntervall
-
                 app.createGrid()
                 app.goodAnswer()
                 app.submit()
@@ -35,6 +34,15 @@ app = {
     
         if (app.countdown==0) {
             clearInterval(app.secondIntervall);
+
+            document.addEventListener("click", handler, true); //these five lines cancels the addeventlistener on the background of the popup
+            function handler(e) {
+                if (e.target.className =='big-button' || e.target.className =='cell') {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+
             popup(app.countScore)
             return app.timer;
             //location.reload();
@@ -110,7 +118,19 @@ app = {
 
         document.querySelector('.answer').textContent =  app.answer + " unité s'il vous plaît"
 
+        app.toggleSquare()
+
         
+
+    },
+    toggleSquare() {
+        if(app.answer>0.50) {
+            app.chocoQuantity=1;
+            var cells = document.querySelectorAll('.cell') 
+            for(let i =0;i<cells.length;i++) {
+                cells[i].classList.add('opacity')
+            }
+        }
 
     },
     selectSquare(event) {  //Manage the click on square and count the choco quantity selected by the player.
@@ -125,6 +145,7 @@ app = {
             app.chocoQuantity.toPrecision(2)
             
         }
+        console.log(app.chocoQuantity)
         
         
         

@@ -22,7 +22,7 @@ app = {
         app.counter++;
         if (app.counter >= app.text.length) {
 
-            window.location.href = "../ch1_g3/ch1_g4.html";
+            window.location.href = "../ch1_g4/ch1_g4.html";
         }
         
     },

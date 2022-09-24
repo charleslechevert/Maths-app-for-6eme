@@ -1,5 +1,5 @@
 html {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Krona One', sans-serif;
 }
 
 
@@ -10,6 +10,7 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     background-color: rgb(65, 62, 59);
     width: 100vw;
     height: 10vh;
@@ -62,9 +63,8 @@ body {
     left:-1500vw;
     position:relative;
     width: 1500vw;
-    animation : slide-right 100s linear infinite;
+    /*animation : slide-right 100s linear infinite; */
     overflow: hidden;
-
 
 }
 
@@ -79,8 +79,17 @@ body {
         -webkit-transform: translateX(100%);
                 transform: translateX(100%);
       }
-    
+}
 
+@keyframes slide-left {
+    from {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+      }
+      to {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
 }
 
 
@@ -106,13 +115,16 @@ body {
 
 .sprite {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .multiple {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .sprite-container {
@@ -125,8 +137,6 @@ body {
 .sprite-img {
     height: 12vh;
     width:12vh;
-
-
 }
 
 .multiple__text {

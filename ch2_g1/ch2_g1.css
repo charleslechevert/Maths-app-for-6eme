@@ -1,0 +1,105 @@
+html {
+    font-family: 'Krona One', sans-serif;
+    
+}
+
+.menu {
+    background-color: rgb(57, 54, 54);
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    color : white;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu__start {
+    font-size: 3vh;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+
+.menu__score {
+    font-size: 3vh;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    
+}
+
+.menu__countdown {
+    font-size: 3vh;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+/*_____________________________________________________________________*/
+
+.sea {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(210, 248, 248);
+    overflow: hidden;
+
+}
+
+.operation {
+    position: absolute;
+    top: 11vh;
+    width: 100%;
+    font-size: 4vh;
+    text-align: center;
+    color:rgb(57, 54, 54);
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 20vw;
+    position: relative;
+    left : 100vw;
+    animation: none;
+}
+
+@keyframes block{
+    0%{left:100vw}
+    100%{left:-27vw}
+}
+
+
+.boat {
+    height : 10vh;
+    
+    
+}
+
+.number {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 15vw;
+    margin-right: 8vw;
+
+}
+
+.character {
+    width: 20vw;
+    height: 10vh;
+    position: absolute;
+    top : 40vh;
+
+
+}
+

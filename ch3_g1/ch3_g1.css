@@ -9,9 +9,12 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     background-color: rgb(57, 54, 51);
     width: 100%;
-    z-index:1000000;  
+    z-index:1000000;
+    height: 10vh;
+
 }
 
 .menu__start {
@@ -38,11 +41,16 @@ html {
     padding: 1rem;
 }
 
+body {
+    height:100vh
+}
+
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 90vh;
 }
 
 .grid {
@@ -57,13 +65,15 @@ main {
     max-width: 500px;
 
 
+
     
 }
 
 .cell {
     display: inline-block;
     box-sizing: border-box;
-    border: 1px solid rgb(198, 193, 193);
+    background-image: url('container2.png');
+    background-size: cover;
 }
 
 .grid {
@@ -77,10 +87,12 @@ main {
 .fill {
   
   cursor: pointer;
-  height: 50px;
-  width:50px;
+  height: 40px;
+  width:40px;
   background-image: url('fruit1.png');
   background-size: cover;
+  
+  
 }
 
 
@@ -111,12 +123,14 @@ main {
 .numberButton{
     box-sizing: border-box;
     text-align: center;
-    padding: 1vw 3vw;
-    font-size: 7vw;
+    width: 15%;
+    margin: 2%;
+    font-size: 4vh;
     border-radius: 10%;
     border:3px solid rgb(6, 53, 11);
     background-color: rgb(57, 54, 51);
-    margin: 2vw 2vw 2vw 2vw;
+    padding : 2vw 0;
+    
     color: white;
     font-family: 'Press Start 2P', cursive;
     
@@ -132,9 +146,12 @@ main {
 
 @media (min-width: 500px) {
     .grid {
-        max-width:500px;
+        max-width:500px;   
+    }
+    .numberButton {
+        width: 8%;
+        margin: 1%;
 
-    
     }
   }
 

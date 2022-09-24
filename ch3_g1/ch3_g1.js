@@ -10,6 +10,7 @@ app = {
                 document.getElementById('start').style.color = 'transparent';
                 setInterval(app.timer,1000);
                 app.generateGrid()
+                yooo()
                 app.generatePad()
                 app.giveAnswer()
                 app.drag()
@@ -65,7 +66,7 @@ app = {
             document.querySelector('.pad').append(newDiv)
         }
     },
-    drag() {
+    dragLaptop() {
         const fill = document.querySelectorAll('.fill');
         const empties = document.querySelectorAll('.cell');
     
@@ -121,7 +122,41 @@ app = {
         }
     
         }
-    },
+       },
+       dragMobile() {
+
+        var fruits = document.querySelectorAll('.fill')
+        for(let i=0; i<fruits.length;i++) {
+         fruits[i].addEventListener('touchmove',function(ev) {
+             var touchLocation = ev.targetTouches[0];
+             fruits[i].style.position = "absolute";
+             fruits[i].style.left = touchLocation.pageX + 'px'
+             fruits[i].style.top = touchLocation.pageY + 'px'
+         })
+        //constraint to do not drag elsewhere than in the grid
+        fruits[i].addEventListener('touchend',function(ev) {
+            var x = parseInt(fruits[i].style.left)
+            var y = parseInt(fruits[i].style.top)
+
+            if (window.screen.height*0.08 >y  || window.screen.height*0.7 < y ) {
+                fruits[i].style.left = '50px'
+                fruits[i].style.top = '50px'  
+            }
+        })
+ 
+        }
+
+       }, 
+       drag() { // Two function of drag created : one for mobile one for laptop
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            app.dragMobile()
+          }else{
+            // false for not mobile device
+            app.dragLaptop()
+          }
+
+
+       },
     giveAnswer() { //CHECK IF ANSWER CORRECT AND LOAD NEW GRID
 
         const onClick = (event) => {
@@ -179,6 +214,28 @@ app = {
 }
 
 app.startGame()
+
+function yooo() {
+   // var yo =  document.createElement('img')
+       // yo.src = 'fruit1.png'
+       // yo.style.width = '100px'
+       // document.querySelector('.grid').append(yo)
+
+       var fruits = document.querySelectorAll('.fill')
+       for(let i=0; i<fruits.length;i++) {
+        fruits[i].addEventListener('touchmove',function(ev) {
+            var touchLocation = ev.targetTouches[0];
+            fruits[i].style.position = "absolute";
+            fruits[i].style.left = touchLocation.pageX + 'px'
+            fruits[i].style.top = touchLocation.pageY + 'px'
+
+        })
+
+       }
+       
+    
+
+}
 
 
 

@@ -1,0 +1,79 @@
+html {
+    font-family: 'Krona One', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    background-color: var(--header-color);
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    color : white;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+}
+
+.menu__start {
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background-image:  url('background_menugame.jpg');
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.game {
+    padding:1rem;
+    margin: 1rem;
+    background-color: rgba(122, 122, 124, 0.5);
+    color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.game__title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-bottom: 3rem;
+
+}
+
+.game__text {
+    width: 60%;
+
+}
+
+.game__descr {
+    text-align: right;
+    font-size: 1rem;
+}
+
+.game__logo {
+    width: 40%;
+    
+
+}
+
+.logo__img {
+    width:50%;
+    min-width:100px;
+    height: auto;
+}
