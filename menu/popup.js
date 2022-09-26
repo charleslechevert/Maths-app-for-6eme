@@ -1,8 +1,6 @@
 
 function popup(countScore) {
 
-    window.PointerEvent = 'none'
-
 
     const popup = document.createElement('div') //Create parent div
     popup.classList.add('popup') //assign class

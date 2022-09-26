@@ -59,8 +59,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+
     box-sizing: border-box;
     max-width: 500px;
 
@@ -115,22 +114,22 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100vw;
-    height:100%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items:center
     
 }
 
 .numberButton{
     box-sizing: border-box;
     text-align: center;
+    line-height: 6vh ;
     width: 15%;
     margin: 2%;
+    height: 6vh;
     font-size: 4vh;
     border-radius: 10%;
     border:3px solid rgb(6, 53, 11);
     background-color: rgb(57, 54, 51);
-    padding : 2vw 0;
-    
     color: white;
     font-family: 'Press Start 2P', cursive;
     

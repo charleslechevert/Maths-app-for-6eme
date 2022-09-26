@@ -10,7 +10,6 @@ app = {
                 document.getElementById('start').style.color = 'transparent';
                 setInterval(app.timer,1000);
                 app.generateGrid()
-                yooo()
                 app.generatePad()
                 app.giveAnswer()
                 app.drag()
@@ -127,22 +126,43 @@ app = {
 
         var fruits = document.querySelectorAll('.fill')
         for(let i=0; i<fruits.length;i++) {
+            var initialTop = fruits[i].style.top //get the initial position of a fruit before moving. Useful if dragged outside the gris in order to position the fruti back to its current location>.
+            var initialLeft = fruits[i].style.left
          fruits[i].addEventListener('touchmove',function(ev) {
+            
+            console.log(initialTop)
+
+
              var touchLocation = ev.targetTouches[0];
              fruits[i].style.position = "absolute";
              fruits[i].style.left = touchLocation.pageX + 'px'
              fruits[i].style.top = touchLocation.pageY + 'px'
          })
-        //constraint to do not drag elsewhere than in the grid
+        //constraint to do not drag elsewhere than in the grid_________________
         fruits[i].addEventListener('touchend',function(ev) {
-            var x = parseInt(fruits[i].style.left)
-            var y = parseInt(fruits[i].style.top)
+            var halfCell = fruits[i].clientHeight/2 //if drop is not in the grid, fruit take back its initial position
+            console.log(halfCell)
+        
+            var x = parseInt(fruits[i].style.left)+parseInt(halfCell)
+            var y = parseInt(fruits[i].style.top)+parseInt(halfCell)
+            console.log(fruits[i].style.top)
+            console.log(halfCell)
+            console.log(y)
 
-            if (window.screen.height*0.08 >y  || window.screen.height*0.7 < y ) {
-                fruits[i].style.left = '50px'
-                fruits[i].style.top = '50px'  
+            var topGrid = document.querySelector('.grid').getBoundingClientRect().top
+            var bottomGrid = document.querySelector('.grid').getBoundingClientRect().bottom
+            console.log(topGrid)
+
+            if (topGrid> y  || bottomGrid < y ) {
+                fruits[i].style.left = initialLeft
+                fruits[i].style.top = initialTop
             }
+
+            //Now, we want the fruit fit perfectly in the cell according (TO BE CONTNUED)
+
+
         })
+
  
         }
 
@@ -202,11 +222,28 @@ app = {
     
         if (app.countdown==0) {
             clearInterval(app.timer);
-            alert("Gamer Over. Score: " + app.countScore);
-            location.reload();
+
+            document.addEventListener("click", handler, true); //these five lines cancels the addeventlistener on the background of the popup
+            function handler(e) {
+                if (e.target.className =='numberButton') {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+            document.addEventListener("touchmove", handler, true); //these five lines cancels the addeventlistener on the background of the popup
+            function handler(e) {
+                if (e.target.className =='fill') {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+
+            popup(app.countScore);
+
     
-        }
+        } else {
         app.countdown--;
+        }
     }
 
 
@@ -215,27 +252,6 @@ app = {
 
 app.startGame()
 
-function yooo() {
-   // var yo =  document.createElement('img')
-       // yo.src = 'fruit1.png'
-       // yo.style.width = '100px'
-       // document.querySelector('.grid').append(yo)
-
-       var fruits = document.querySelectorAll('.fill')
-       for(let i=0; i<fruits.length;i++) {
-        fruits[i].addEventListener('touchmove',function(ev) {
-            var touchLocation = ev.targetTouches[0];
-            fruits[i].style.position = "absolute";
-            fruits[i].style.left = touchLocation.pageX + 'px'
-            fruits[i].style.top = touchLocation.pageY + 'px'
-
-        })
-
-       }
-       
-    
-
-}
 
 
 
