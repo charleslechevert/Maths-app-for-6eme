@@ -5,7 +5,6 @@ function popup(countScore) {
     const popup = document.createElement('div') //Create parent div
     popup.classList.add('popup') //assign class
     document.getElementsByTagName('body')[0].append(popup)
-    popup.PointerEvent = 'auto'
     popup.style.backgroundColor = 'rgb(57, 54, 54)'
     popup.style.width = '75vw'
     popup.style.height = '40vh'

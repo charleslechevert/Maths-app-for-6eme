@@ -4,7 +4,7 @@ app = {
     upPosition: '',
     leftPosition: '',
     rightPosition: '',
-    countdown: 90,
+    countdown: 360,
     countScore: 0,
 
 
@@ -22,7 +22,8 @@ app = {
             if (state==false) { //state manage the fact you can only once press start
                 state = true;
                 document.getElementById('start').style.color = 'transparent';
-                setInterval(app.timer,1000);
+                secondIntervall = setInterval(app.timer,1000);
+                secondIntervall
                 app.generateNearNumber()
         }
         })
@@ -34,12 +35,26 @@ app = {
         document.getElementById('countdown').innerHTML = app.countdown;
     
         if (app.countdown==0) {
+
+            clearInterval(secondIntervall)
+            document.addEventListener("click", handler, true); //these five lines cancels the addeventlistener on the background of the popup
+            function handler(e) {
+                if (e.target.className =='cell') {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+
+            
+
             clearInterval(app.timer);
-            alert("Gamer Over. Score: " + countScore);
-            location.reload();
+            popup(app.countScore);
+            
     
+        } else {
+            app.countdown--;
         }
-        app.countdown--;
+        
     },
 
     createGrid(gridSize = 8, cellSize = 25) {
@@ -96,8 +111,18 @@ app = {
         
         //generate the position of the neighbour 
         app.upPosition = parseInt(spritePosition) - 8
+
+        if(spritePosition%8 ==1) {
+            app.leftPosition = parseInt(spritePosition) + 7 
+
+        } else {
         app.leftPosition = parseInt(spritePosition) - 1 
-        app.rightPosition = parseInt(spritePosition) + 1 
+        }
+
+        if(spritePosition%8 ==0) {
+            app.rightPosition = parseInt(spritePosition) - 7 
+        }
+        else {app.rightPosition = parseInt(spritePosition) + 1 }
 
         // generate the neighbour number : 1 multiple 2 not-multiple
         var number1 = 0
@@ -140,7 +165,9 @@ app = {
     },
 
     moveSprite(event) {
+        
         if (event.target.textContent != '' && event.target.textContent % app.divisor == 0) {
+            document.querySelector('.sprite').parentElement.style.background = 'none'
             event.target.textContent = ''
 
             app.countScore++; //up the score
