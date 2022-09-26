@@ -4,7 +4,7 @@ app = {
     upPosition: '',
     leftPosition: '',
     rightPosition: '',
-    countdown: 360,
+    countdown: 90,
     countScore: 0,
 
 
@@ -75,6 +75,7 @@ app = {
             // Je configure mon élément
             // ici on rajoute la class css `cell` à notre élément HTML cellElm
             cellElm.classList.add('cell');
+            cellElm.style.backgroundImage = 'url(pavement.png)'
             var numberID = ((rowNumber)*8)+(cellNumber+1) //Give an ID for the position of each cell
             cellElm.setAttribute('id',(numberID))
     
@@ -125,30 +126,49 @@ app = {
         else {app.rightPosition = parseInt(spritePosition) + 1 }
 
         // generate the neighbour number : 1 multiple 2 not-multiple
-        var number1 = 0
-        while (number1 % app.divisor == 0) {
-            number1 = Math.ceil(Math.random()*50)
+        var number3 = 0
+        while (number3 % app.divisor == 0) {
+            number3 = Math.ceil(Math.random()*50)
         }
         var number2 = 0
         while (number2 % app.divisor == 0) {
             number2 = Math.ceil(Math.random()*50)
         }
 
-        var number3 = undefined
-        while (number3 % app.divisor != 0) {
-            number3 = Math.ceil(Math.random()*50)
+        var number1 = undefined
+        while (number1 % app.divisor != 0) {
+            number1 = Math.ceil(Math.random()*50)
         }
+
+
         
         //put the value in an array and shuffle it randomly 
         var numbers = [number1,number2,number3]
+
+        console.log(document.getElementById(app.leftPosition).style.backgroundImage !== 'url(pavement.png)' || document.getElementById(app.rightPosition).style.backgroundImage !== 'url(pavement.png)')
+        if(document.getElementById(app.leftPosition).style.backgroundImage !== 'url("pavement.png")' || document.getElementById(app.rightPosition).style.backgroundImage !== 'url("pavement.png")') {
+            numbers.pop() //remove an option if one pavement is gone
+        }
+
+        if(document.getElementById(app.leftPosition).style.backgroundImage !== 'url("pavement.png")' && document.getElementById(app.rightPosition).style.backgroundImage !== 'url("pavement.png")') {
+            numbers.pop() //remove another option if another pavement is gone
+        }
+
         console.log(numbers)
         app.shuffle(numbers) 
-        console.log(numbers)
+
 
         //Connect the random numbers to the neigbhour cells
         document.getElementById(app.upPosition).textContent = numbers[0]
-        document.getElementById(app.leftPosition).textContent = numbers[1]
-        document.getElementById(app.rightPosition).textContent = numbers[2]
+
+        if(document.getElementById(app.leftPosition).style.backgroundImage == 'url("pavement.png")' ) {
+            document.getElementById(app.leftPosition).textContent = numbers[1]
+        }
+        
+        if(document.getElementById(app.rightPosition).style.backgroundImage == 'url("pavement.png")') {
+            document.getElementById(app.rightPosition).textContent = numbers[2]
+        }
+        
         
         
       },
@@ -166,8 +186,9 @@ app = {
 
     moveSprite(event) {
         
+        
         if (event.target.textContent != '' && event.target.textContent % app.divisor == 0) {
-            document.querySelector('.sprite').parentElement.style.background = 'none'
+            document.querySelector('.sprite').parentElement.style.backgroundImage = 'none' //remove pavement when sprite is gone 
             event.target.textContent = ''
 
             app.countScore++; //up the score
@@ -183,7 +204,9 @@ app = {
         }
 
         else if (event.target.textContent != '') {
-            app.countScore--; //down the score
+            if(app.countScore>0) {
+                app.countScore--; //down the score
+            }
             document.getElementById('score').textContent = app.countScore//display new score
 
             event.target.style.backgroundImage = "url(vortex.png)" //create vortex effect if wrong
@@ -202,8 +225,13 @@ app = {
         if (document.querySelector('.sprite').parentElement.id < 9) {
             var startPosition = document.getElementById('75')
             startPosition.append(document.querySelector('.sprite'))
-
+            for(let i=0;i<document.querySelectorAll('.cell').length;i++) {
+                document.querySelectorAll('.cell')[i].style.backgroundImage="url(pavement.png)"
+            }
         }
+        console.log(document.querySelectorAll('.cell').length)
+
+
     },
 
 }

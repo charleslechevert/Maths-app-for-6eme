@@ -74,7 +74,7 @@ main {
     width: 12.5vw;
     height: 12.5vw;
     box-sizing: border-box;
-    background-image: url('pavement.png');
+    
     background-size: cover;
     font-family: 'Bungee Spice', cursive;
     text-align: center;
