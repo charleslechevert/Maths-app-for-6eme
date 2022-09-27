@@ -63,6 +63,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     position:relative;
+    bottom: 0vh;
     animation: none;
     margin: 0 2vw;
     
