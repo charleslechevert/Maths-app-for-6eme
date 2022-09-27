@@ -11,16 +11,18 @@ app = {
     init() {
 
         document.body.height = window.innerHeight + 'px'
+        
+        
 
         app.createGrid()
-        app.startGame()
         app.placeSprite()
+        app.startGame()
+        
         
 
     },
     startGame() {
         document.getElementById('start').addEventListener('click', (event) => {
-            console.log('yo')
             state = false;
             if (state==false) { //state manage the fact you can only once press start
                 state = true;
@@ -79,9 +81,16 @@ app = {
             // ici on rajoute la class css `cell` à notre élément HTML cellElm
             cellElm.classList.add('cell');
 
-            var lengthCell = document.querySelector('.grid').clientWidth / 8 
-            cellElm.style.height = lengthCell +'px'
-            cellElm.style.width = lengthCell +'px'
+            var lengthCell = document.querySelector('.grid').clientWidth / 8
+            console.log(window.innerWidth)
+            if (window.innerWidth < 500) {
+                cellElm.style.height = lengthCell +'px'
+                cellElm.style.width = lengthCell +'px'
+            } else {
+                cellElm.style.height = '60px'
+                cellElm.style.width = '60px'
+            }
+            
             
 
             cellElm.style.backgroundImage = 'url(pavement.png)'
@@ -99,6 +108,9 @@ app = {
           // J'ajoute mon élément dans le DOM
           app.gridElm.append(rowElm);
         }
+
+        document.querySelector('.grid').style.marginLeft = 'auto'
+        document.querySelector('.grid').style.marginRight = 'auto'
         
       },
       placeSprite() {

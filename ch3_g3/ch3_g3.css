@@ -3,6 +3,11 @@ html {
 
 }
 
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+
 
 
 .menu {
@@ -12,11 +17,8 @@ html {
     justify-content: space-around;
     background-color: rgb(57, 55, 53);
     width: 100%;
-    height: 10%;
-    align-items: center;
-
-
-    
+    height: 50%;
+    align-items: center;  
 }
 
 .menu__start {
@@ -52,18 +54,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:90%;
+
+    
 }
 
 
 
 /* GRID____________________________________________________________________*/
 
-.grid {
-    background-image: url('background.jpg');
-    background-size: cover;
 
-}
 
 .row{
     
@@ -74,22 +73,25 @@ main {
 
 .cell {
     
-    width: 12.5vw;
-    height: 12.5vw;
+    width: 10%;
+    height: 10%;
     box-sizing: border-box;
-    
     background-size: cover;
     font-family: 'Bungee Spice', cursive;
+    font-size: 250%;
     text-align: center;
-    font-size: 8vw;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 
 }
 
+
+
 .sprite {
-    height: 12vw;
-    width: 12vw;
+    height: 100%;
+    width: 100%;
 }
 
 /*INFO_________________________________________*/
@@ -98,10 +100,9 @@ main {
     flex-grow:1;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content: space-evenly;
-    background-image: url('background.jpg');
-    background-size: cover;
+    justify-content: center;
+    margin-top: 2vh;
+ 
 }
 
 .divisor__descr {
@@ -111,9 +112,9 @@ main {
 }
 
 .divisor__number {
-    margin-top: 5vh;
     text-align: center;
     font-size:8vh;
     font-family: 'Bungee Spice', cursive;
 
 }
+
