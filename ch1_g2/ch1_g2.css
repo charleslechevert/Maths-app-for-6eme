@@ -50,7 +50,6 @@ body {
     width:100vw;
     height: 90vh;
     background-color: rgb(220, 238, 251);
-    background-size: 100% auto;
     background-position:bottom;
     overflow: hidden;
 

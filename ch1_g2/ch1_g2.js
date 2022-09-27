@@ -219,6 +219,17 @@ app = {
     
         if (app.countdown==0) {
             clearInterval(app.secondIntervall);
+
+            document.addEventListener("click", handler, true); //these five lines cancels the addeventlistener on the background of the popup
+            function handler(e) {
+                if (e.target.className =='digit') {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+
+
+
             popup(app.countScore);
     
         }
