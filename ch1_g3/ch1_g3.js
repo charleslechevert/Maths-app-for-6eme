@@ -110,7 +110,8 @@ app = {
     
     elem.setAttribute("src", 'parrot'+ (Math.ceil(Math.random()*8)) + '.png');
     elem.setAttribute("id", app.idParrot);
-    app.numSelected.prepend(elem)
+    console.log(app.numSelected)
+    app.numSelected.parentElement.prepend(elem)
     var imgs = document.querySelectorAll('.parrot__img')
     app.selectParrot() //this is mandatory because we have to apply an eventlistener on new parrot
     

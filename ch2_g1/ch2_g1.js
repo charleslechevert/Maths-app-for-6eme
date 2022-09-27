@@ -69,7 +69,7 @@ app = {
             if(app.jumping==0) {
                 app.character.style.top = (characterTop+3)+'px';
             }
-            if(boat1Left < app.character.getBoundingClientRect().width && (characterTop > (boat1Top+20) && characterTop < boat1Bottom-20  )) {
+            if((boat1Left < app.character.getBoundingClientRect().width && boat1Left > 0) && (characterTop + 20 > (boat1Top) && characterTop < boat1Bottom  )) {
                 if(document.getElementById('n1').textContent==app.answer) {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
@@ -89,7 +89,7 @@ app = {
                 
             }
 
-            if(boat2Left < app.character.getBoundingClientRect().width && (characterTop > (boat2Top+20) && characterTop < boat2Bottom-20  )) {
+            if(boat2Left < app.character.getBoundingClientRect().width && (characterTop + 20 > (boat2Top) && characterTop < boat2Bottom  )) {
                 if( document.getElementById('n2').textContent==app.answer) {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
@@ -104,7 +104,7 @@ app = {
                 }
             }
 
-            if(boat3Left < app.character.getBoundingClientRect().width && (characterTop > (boat3Top+20) && characterTop < boat3Bottom-20  )) {
+            if(boat3Left < app.character.getBoundingClientRect().width && (characterTop + 20 > (boat3Top) && characterTop < boat3Bottom  )) {
                 if( document.getElementById('n3').textContent==app.answer) {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;

@@ -74,12 +74,13 @@ html {
 
 @keyframes block{
     0%{left:100vw}
-    100%{left:-27vw}
+    100%{left:-40vw}
 }
 
 
 .boat {
     height : 10vh;
+    
     
     
 }
@@ -98,6 +99,7 @@ html {
     height: 10vh;
     position: absolute;
     top : 40vh;
+    z-index:10;
 
 
 }
