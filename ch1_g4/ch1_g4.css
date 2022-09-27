@@ -1,13 +1,12 @@
 html {
     font-family: 'Krona One', sans-serif;
-    height: 100%;
+
     
     
 }
 
 .menu {
     background-color: rgb(57, 54, 54);
-    height: 10vh;
     display: flex;
     flex-direction: row;
     color : white;
