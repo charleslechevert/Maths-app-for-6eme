@@ -3,6 +3,9 @@ app = {
     countScore : 0,
     countdown:90,
     startGame() { //It starts the game
+
+        document.body.height = window.innerHeight + 'px'
+        
         document.getElementById('start').addEventListener('click', ()=> {
             state = false;
             if (state==false) { //state manage the fact you can only once press start

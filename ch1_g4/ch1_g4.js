@@ -9,6 +9,8 @@ app = {
     secondIntervall:'',
 
     init() {
+
+        
         document.querySelector('.menu').style.height = window.innerHeight/10 + 'px'
         document.querySelector('main').style.height =  window.innerHeight/10*9 + 'px'
         app.startGame()
