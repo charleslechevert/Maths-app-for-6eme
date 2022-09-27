@@ -9,6 +9,9 @@ app = {
 
 
     init() {
+
+        document.body.height = window.innerHeight + 'px'
+
         app.createGrid()
         app.startGame()
         app.placeSprite()
@@ -75,6 +78,12 @@ app = {
             // Je configure mon élément
             // ici on rajoute la class css `cell` à notre élément HTML cellElm
             cellElm.classList.add('cell');
+
+            var lengthCell = document.querySelector('.grid').clientWidth / 8 
+            cellElm.style.height = lengthCell +'px'
+            cellElm.style.width = lengthCell +'px'
+            
+
             cellElm.style.backgroundImage = 'url(pavement.png)'
             var numberID = ((rowNumber)*8)+(cellNumber+1) //Give an ID for the position of each cell
             cellElm.setAttribute('id',(numberID))
