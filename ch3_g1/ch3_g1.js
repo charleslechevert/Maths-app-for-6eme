@@ -2,6 +2,7 @@ app = {
     randomSize : null,
     countScore : 0,
     countdown:90,
+    secondIntervall: '',
     startGame() { //It starts the game
 
         document.body.height = window.innerHeight + 'px'
@@ -11,7 +12,8 @@ app = {
             if (state==false) { //state manage the fact you can only once press start
                 state = true;
                 document.getElementById('start').style.color = 'transparent';
-                setInterval(app.timer,1000);
+                app.secondIntervall = setInterval(app.timer,1000);
+                app.secondIntervall
                 app.generateGrid()
                 app.generatePad()
                 app.giveAnswer()
@@ -224,7 +226,7 @@ app = {
         document.getElementById('countdown').innerHTML = app.countdown;
     
         if (app.countdown==0) {
-            clearInterval(app.timer);
+            clearInterval(app.secondIntervall);
 
             document.addEventListener("click", handler, true); //these five lines cancels the addeventlistener on the background of the popup
             function handler(e) {

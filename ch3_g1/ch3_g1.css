@@ -41,9 +41,6 @@ html {
     padding: 1rem;
 }
 
-body {
-    height:100vh
-}
 
 main {
     display: flex;
@@ -59,7 +56,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     box-sizing: border-box;
     max-width: 500px;
 
@@ -110,6 +106,7 @@ main {
 /*Pad style */
 
 .pad {
+    margin-top : 4vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
