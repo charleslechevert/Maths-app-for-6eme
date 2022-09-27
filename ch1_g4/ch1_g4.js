@@ -9,7 +9,6 @@ app = {
     secondIntervall:'',
 
     init() {
-        console.log(window.innerHeight/2)
         document.querySelector('.menu').style.height = window.innerHeight/10 + 'px'
         document.querySelector('main').style.height =  window.innerHeight/10*9 + 'px'
         app.startGame()
@@ -63,8 +62,6 @@ app = {
 
        app.random = app.random.sort((a, b) => b-a); //Sort te array in descending order in order to fit better with mobilephone
 
-
-        console.log(app.random)
         
         for(let rowNumber = 0; rowNumber < app.random[0]; rowNumber++) {
             // Je vais créer mes lignes
@@ -78,7 +75,11 @@ app = {
                 // Je créer mon élément
                   const cellElm = document.createElement('div');
                   cellElm.style.width = (90/app.random[1]) + 'vw'
-                  cellElm.style.height = (65/app.random[0]) + 'vh'
+                  console.log(innerHeight)
+                  console.log(app.random[0])
+                  console.log((document.innerHeight*65/100)/app.random[0])
+
+                  cellElm.style.height = ((innerHeight*60/100)/app.random[0]) + 'px'
                   // Je configure mon élément
                   // ici on rajoute la class css `cell` à notre élément HTML cellElm
                   cellElm.classList.add('cell');        
@@ -108,14 +109,11 @@ app = {
     },
     goodAnswer() { //Select an answer an put in the bubble box
         app.answer = Math.random().toFixed(2);
-        console.log(app.answer)
+
 
 
         while (((app.answer*100) % (100/(app.random[0]*app.random[1]))).toFixed(2) != 0 || app.answer==0) { // modulo doesn't work well with decimal so we do the while loop with integer by multiplying by 100
             app.answer = Math.random().toFixed(2);
-            console.log(app.answer*100)
-            console.log(1/(app.random[0]*app.random[1])*100)
-            console.log('diviseur : ' + ((1/(app.random[0]*app.random[1]))).toFixed(2))
         }
 
         document.querySelector('.answer').textContent =  app.answer + " unité s'il vous plaît"
