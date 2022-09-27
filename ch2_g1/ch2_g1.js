@@ -9,6 +9,11 @@ app = {
     startState:false,
     init() {
 
+        document.body.height = window.innerHeight + 'px'
+        document.querySelector('.menu').style.height =  window.innerHeight/10 + 'px'
+        document.querySelector('main').style.height =  (window.innerHeight/10)*9 + 'px'
+        document.querySelector('.sea').style.height =  (window.innerHeight/10)*9 + 'px'
+
         app.startGame()
 
     },
