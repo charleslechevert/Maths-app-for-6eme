@@ -166,7 +166,7 @@ app = {
         }
         
         if(document.getElementById(app.rightPosition).style.backgroundImage == 'url("pavement.png")') {
-            document.getElementById(app.rightPosition).textContent = numbers[2]
+            document.getElementById(app.rightPosition).textContent = numbers[numbers.length-1]
         }
         
         
@@ -191,7 +191,10 @@ app = {
             document.querySelector('.sprite').parentElement.style.backgroundImage = 'none' //remove pavement when sprite is gone 
             event.target.textContent = ''
 
-            app.countScore++; //up the score
+            if(event.target.id == app.upPosition) {
+                app.countScore++; //up the score
+            }
+            
             document.getElementById('score').textContent = app.countScore //display new score
             
 

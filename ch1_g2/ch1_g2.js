@@ -6,7 +6,7 @@ app = {
     countScore : 0,
     clicked : [false,false,false,false,false,false,false],
     state : false,
-    countdown: 30,
+    countdown: 40,
     secondIntervall:0,
     generateNumber() {
         for(let i =1;i<8;i++) {
