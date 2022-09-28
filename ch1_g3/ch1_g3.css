@@ -58,7 +58,7 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height:93vh;
+    height:100%
 }
 
 .parrot__container {
