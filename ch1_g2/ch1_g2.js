@@ -8,6 +8,7 @@ app = {
     state : false,
     countdown: 40,
     secondIntervall:0,
+    doubleClick: false,
     generateNumber() {
         for(let i =1;i<8;i++) {
         randomValue = Math.floor(Math.random()*18);
@@ -20,7 +21,8 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit1').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[0]==false) {
+            if (clicked[0]==false && app.doubleClick==false) {
+                app.doubleClick = true;
                 if (playerDigit == 0) {
                     app.countScore++;
                     document.getElementById("random_digit1").style.color = 'transparent';
@@ -43,8 +45,9 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit2').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[1]==false) {
-                if (playerDigit == 0 & app.digit[0] == 0) {
+            if (clicked[1]==false && app.doubleClick==false) {
+                app.doubleClick = true;
+                if (playerDigit == 0 && app.digit[0] == 0) {
                     app.countScore++;
                     document.getElementById("random_digit2").style.color = 'transparent';
                     document.getElementById("random_digit2").style.textShadow = 'none';
@@ -63,7 +66,8 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit3').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[2]==false) {
+            if (clicked[2]==false && app.doubleClick==false) {
+                app.doubleClick = true;
                 document.getElementById("random_digit3").style.color = 'darkred';
                 if(app.countScore>0) {
                     app.countScore--;
@@ -76,7 +80,8 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit4').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[3]==false) {
+            if (clicked[3]==false && app.doubleClick==false) {
+                app.doubleClick = true;
                 if (playerDigit == 0 & app.digit[6] == 0 & app.digit[5] == 0 & app.digit[4] == 0) {
                     app.countScore++;
                     document.getElementById("random_digit4").style.color = 'transparent';
@@ -96,7 +101,8 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit5').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[4]==false) {
+            if (clicked[4]==false && app.doubleClick==false) {
+                app.doubleClick = true;
                 if (playerDigit == 0 & app.digit[6] == 0 & app.digit[5] == 0) {
                     app.countScore++;
                     document.getElementById("random_digit5").style.color = 'transparent';
@@ -117,7 +123,8 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit6').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[5]==false) {
+            if (clicked[5]==false && app.doubleClick==false) {
+                app.doubleClick = true;
                 if (playerDigit == 0 & app.digit[6] == 0) {
                     app.countScore++;
                     document.getElementById("random_digit6").style.color = 'transparent';
@@ -138,7 +145,8 @@ app = {
         var playerDigit = 0;
         document.getElementById('random_digit7').addEventListener('click', (event)=> {
             playerDigit = event.target.innerHTML;
-            if (clicked[6]==false) {
+            if (clicked[6]==false && app.doubleClick==false) {
+                app.doubleClick = true;
                 if (playerDigit == 0) {
                     app.countScore++;
                     document.getElementById("random_digit7").style.color = 'transparent';
@@ -165,6 +173,7 @@ app = {
         }
     
         clicked = [false,false,false,false,false,false,false];
+        app.doubleClick = false;
         document.getElementById("random_digit1").style.color = 'black';
         document.getElementById("random_digit1").style.textShadow = '3px 3px rgba(55, 56, 64, 0.647)';
         document.getElementById("random_digit1").style.backgroundImage = "none";
