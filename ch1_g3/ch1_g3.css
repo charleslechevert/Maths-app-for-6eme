@@ -13,7 +13,6 @@ html {
     position:relative;
     width: 100%;
     z-index:1000000;
-    height: 7vh;
 
     
 }
@@ -45,7 +44,6 @@ html {
 }
 
 .main {
-    height:93vh;
     overflow: hidden;
     background-image:  url('ch1_g3_background.jpg');
     background-size: cover;
@@ -53,7 +51,7 @@ html {
 }
 
 .main__parrots {
-    width:35vw;
+    width:28vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
