@@ -112,6 +112,11 @@ main {
     
 }
 
+.answer {
+  z-index:1000;
+  
+}
+
 /* Bubble commics___________________________________________________ */
 
 
@@ -130,6 +135,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: start;
+   
 }
 
 .left-point{
@@ -139,8 +145,11 @@ main {
 	border-right: 2vh solid transparent;
 	border-top: 12vh solid  rgb(57, 54, 54);
 	left: 20%;
-  position: relative;
+  position: absolute;
 	transform: rotate(-20deg);
+  bottom: 4vh;
+  
+
 }
 
 .sprite {
