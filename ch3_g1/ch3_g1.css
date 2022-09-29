@@ -86,6 +86,7 @@ main {
   width:40px;
   background-image: url('fruit1.png');
   background-size: cover;
+  touch-action: none;
   
   
 }

@@ -56,7 +56,7 @@ main {
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    height:61vh;
+    height:70%;
     
 }
 
@@ -145,7 +145,7 @@ main {
 	left: 20%;
   position: absolute;
 	transform: rotate(-20deg);
-  bottom: 4vh;
+  bottom: 6vh;
   
 
 }
