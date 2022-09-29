@@ -1,6 +1,6 @@
 app = {
     countScore : 0,
-    countdown : 2,
+    countdown : 50,
     secondIntervalls : '',
     init() {
         app.numberGenerated()
@@ -253,6 +253,13 @@ app = {
 
     }
 }
+
+//this function make the content responsive to any browser (height)
+window.addEventListener('load', (event) => {
+    console.log(window.innerHeight)
+    document.querySelector('.menu').style.height = window.innerHeight/10 + 'px'
+    document.querySelector('main').style.height = window.innerHeight*0.9 + 'px'
+  });
 
 app.init()
 
