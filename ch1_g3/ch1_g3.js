@@ -153,6 +153,8 @@ app = {
 
 app.init()
 
+
+//this function make the content responsive to any browser (height)
 window.addEventListener('load', (event) => {
   console.log(window.innerHeight)
   document.querySelector('.menu').style.height = window.innerHeight/10 + 'px'

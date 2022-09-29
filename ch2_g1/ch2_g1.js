@@ -69,7 +69,7 @@ app = {
             if(app.jumping==0) {
                 app.character.style.top = (characterTop+3)+'px';
             }
-            if((boat1Left < app.character.getBoundingClientRect().width && boat1Left > 0) && (characterTop + 20 > (boat1Top) && characterTop < boat1Bottom  )) {
+            if((boat1Left < document.querySelector('.boat').getBoundingClientRect().width && boat1Left > 0) && (characterTop + 20 > (boat1Top) && characterTop < boat1Bottom  )) {
                 if(document.getElementById('n1').textContent==app.answer) {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
@@ -88,8 +88,8 @@ app = {
                 }
                 
             }
-
-            if(boat2Left < app.character.getBoundingClientRect().width && (characterTop + 20 > (boat2Top) && characterTop < boat2Bottom  )) {
+        
+            if((boat2Left < document.querySelector('.boat').getBoundingClientRect().width && boat2Left > 0) && (characterTop + 20 > (boat2Top) && characterTop < boat2Bottom  )) {
                 if( document.getElementById('n2').textContent==app.answer) {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
@@ -100,11 +100,11 @@ app = {
                         document.querySelector('.character').remove()
                         popup(app.countScore)
                     }
-                    , 200)
+                    , 400)
                 }
             }
 
-            if(boat3Left < app.character.getBoundingClientRect().width && (characterTop + 20 > (boat3Top) && characterTop < boat3Bottom  )) {
+            if((boat3Left < document.querySelector('.boat').getBoundingClientRect().width && boat3Left > 0) && (characterTop + 20 > (boat3Top) && characterTop < boat3Bottom  )) {
                 if( document.getElementById('n3').textContent==app.answer) {
                     app.countScore++;
                     document.getElementById('score').textContent = app.countScore;
