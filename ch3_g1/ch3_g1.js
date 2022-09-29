@@ -129,6 +129,8 @@ app = {
        },
        dragMobile() {
 
+        app. disableScroll()
+
         var fruits = document.querySelectorAll('.fill')
         for(let i=0; i<fruits.length;i++) {
             var initialTop = fruits[i].style.top //get the initial position of a fruit before moving. Useful if dragged outside the gris in order to position the fruti back to its current location>.
@@ -182,6 +184,16 @@ app = {
 
 
        },
+       disableScroll() {
+        // Get the current page scroll position
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      
+            // if any scroll is attempted, set this to the previous value
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+    },
     giveAnswer() { //CHECK IF ANSWER CORRECT AND LOAD NEW GRID
 
         const onClick = (event) => {
