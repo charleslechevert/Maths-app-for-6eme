@@ -126,7 +126,7 @@ app = {
 
 
 
-            if(characterTop<((window.innerHeight/10))) { //manage the fact if the boat touch the top or down it is game over
+            if(characterTop<((window.innerHeight/10)-3)) { //manage the fact if the boat touch the top or down it is game over
                 document.querySelector('.boat').src = 'boom.png'
                 document.querySelector('.boat').classList.add("boom")
                     

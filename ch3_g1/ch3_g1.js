@@ -204,7 +204,7 @@ app = {
             if (answerStudent == (numberFruits % divisor)) {
                 app.countScore++;
                 document.getElementById("score").textContent = app.countScore;
-            } else {
+            } else if (app.countScore>0) {
                 app.countScore--;
                 document.getElementById("score").textContent = app.countScore;
             }

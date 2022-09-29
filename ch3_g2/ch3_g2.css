@@ -92,6 +92,12 @@ body {
       }
 }
 
+.plouf {
+    transition-duration: 0.5s;
+    transform : scale(0) rotate(720deg);
+    
+}
+
 
 .number { /*Manage */
     height: 12vh;

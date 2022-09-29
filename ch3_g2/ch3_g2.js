@@ -91,8 +91,13 @@ app = {
                         app.moveSprite2()
                         
 
-                    } else if (event.target.textContent % divisorElm != 0 && app.countScore > 0) {
-                        app.countScore--;
+                    } else if(event.target.textContent % divisorElm != 0) {
+                        event.target.classList.add('plouf')
+                        if(app.countScore>0) {
+                            app.countScore--;
+                        }
+                        
+                        
                         document.querySelector('#score').textContent = app.countScore;
                     } 
                     
@@ -126,8 +131,13 @@ app = {
     
                             
         
-                        } else if (event.target.textContent % divisorElm != 0 && app.countScore > 0) {
-                            app.countScore--;
+                        } else if(event.target.textContent % divisorElm != 0) {
+                            event.target.classList.add('plouf')
+                            if(app.countScore>0) {
+                                app.countScore--;
+                            }
+                            
+                            
                             document.querySelector('#score').textContent = app.countScore;
                         } 
                         
@@ -158,8 +168,13 @@ app = {
     
                             
         
-                        } else if (event.target.textContent % divisorElm != 0 && app.countScore > 0) {
-                            app.countScore--;
+                        } else if(event.target.textContent % divisorElm != 0) {
+                            event.target.classList.add('plouf')
+                            if(app.countScore>0) {
+                                app.countScore--;
+                            }
+                            
+                            
                             document.querySelector('#score').textContent = app.countScore;
                         } 
                         
@@ -192,8 +207,13 @@ app = {
     
                             
         
-                        } else if (event.target.textContent % divisorElm != 0 && app.countScore > 0) {
-                            app.countScore--;
+                        } else if(event.target.textContent % divisorElm != 0) {
+                            event.target.classList.add('plouf')
+                            if(app.countScore>0) {
+                                app.countScore--;
+                            }
+                            
+                            
                             document.querySelector('#score').textContent = app.countScore;
                         } 
                         
@@ -238,10 +258,15 @@ app = {
                         document.querySelector(".sprite").append(document.querySelector('.sprite-img'))
                         app.numberGenerated()
 
-                    } else if (event.target.textContent % divisorElm != 0 && app.countScore > 0) {
-                        app.countScore--;
-                        document.querySelector('#score').textContent = app.countScore;
+                    } else if(event.target.textContent % divisorElm != 0) {
+                        event.target.classList.add('plouf')
+                        if(app.countScore>0) {
+                            app.countScore--;
                         }
+                        
+                        
+                        document.querySelector('#score').textContent = app.countScore;
+                    } 
                 })
 
 
