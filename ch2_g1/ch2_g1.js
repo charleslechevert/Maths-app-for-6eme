@@ -75,6 +75,7 @@ app = {
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
                     document.querySelector('.boat').src = 'boom.png'
+                    document.querySelector('.boat').classList.add("boom")
                     
                     setTimeout(() => {
                         document.querySelector('.character').remove()
@@ -95,6 +96,7 @@ app = {
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
                     document.querySelector('.boat').src = 'boom.png'
+                    document.querySelector('.boat').classList.add("boom")
                     
                     setTimeout(() => {
                         document.querySelector('.character').remove()
@@ -110,6 +112,9 @@ app = {
                     document.getElementById('score').textContent = app.countScore;
                 } else { 
                     document.querySelector('.boat').src = 'boom.png'
+                    document.querySelector('.boat').classList.add("boom")
+                    
+
                     
                     setTimeout(() => {
                         document.querySelector('.character').remove()
@@ -123,6 +128,7 @@ app = {
 
             if(characterTop<((window.innerHeight/10)-20)) { //manage the fact if the boat touch the top or down it is game over
                 document.querySelector('.boat').src = 'boom.png'
+                document.querySelector('.boat').classList.add("boom")
                     
                     setTimeout(() => {
                         document.querySelector('.character').remove()
@@ -133,6 +139,7 @@ app = {
 
             if((characterTop>(window.innerHeight-40))) { //manage the fact if the boat touch the top or down it is game over
                 document.querySelector('.boat').src = 'boom.png'
+                document.querySelector('.boat').classList.add("boom")
                     
                     setTimeout(() => {
                         document.querySelector('.character').remove()

@@ -79,10 +79,13 @@ html {
 
 
 .boat {
-    height : 10vh;
+    height : 10vh; 
     
-    
-    
+}
+
+.boom {
+    transition-duration: 1s;
+    transform : scale(20)
 }
 
 .number {
