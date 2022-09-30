@@ -233,8 +233,12 @@ app = {
             }
             document.getElementById('score').textContent = app.countScore//display new score
 
-            event.target.style.backgroundImage = "url(vortex.png)" //create vortex effect if wrong
+            event.target.style.backgroundImage = "url(vortex2.png)" //create vortex effect if wrong
             event.target.textContent = ''
+            event.target.style.transition = "1s"
+            event.target.style.transform = "rotate(720deg)"
+
+
 
             setTimeout(() => event.target.style.backgroundImage = "url(pavement.png)", 800) //create vortex effect if wrong
             
