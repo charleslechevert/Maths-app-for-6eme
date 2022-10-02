@@ -1,7 +1,7 @@
 
 
 app = {
-  number : [0,0.2,0.4,0.6,0.8,1,1.2,1.4,1.6,1.8,2,2.2,2.4,2.6,2.8,3,3.2,3.4,3.6,3.8,4],
+  number : [0.2,0.2,0.4,0.6,0.8,1,1.2,1.4,1.6,1.8,2,2.2,2.4,2.6,2.8,3,3.2,3.4,3.6,3.8,4],
   playerDigit : 4,
   test : true,
   countScore : 0,
@@ -99,7 +99,7 @@ app = {
    
     var randomNumber = Math.floor(Math.random()*16); //new number - while loop used in order to select numbers which are still in the game
     app.numSelected.textContent = app.number[randomNumber]
-    while(app.numSelected.textContent < ((40 - app.countdown)/10)) {
+    while(app.numSelected.textContent < ((40 - app.countdown)/10)+0.2) {
       randomNumber = Math.floor(Math.random()*16)
       app.numSelected.textContent = app.number[randomNumber]
 

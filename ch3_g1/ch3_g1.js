@@ -27,18 +27,18 @@ app = {
         var numFruit = Math.ceil(Math.random()*8) //Select randomly fruit to displat
 
 
-        var randomSize = Math.floor(Math.random() * (8 - 4) + 4)
+        app.randomSize = Math.floor(Math.random() * (8 - 4) + 4)
         if(window.screen.width < 500) { //Manage responsivness (if phone we are in VW whereas in laptop we are in px)
-            var sizeCell = (100 / randomSize)
+            var sizeCell = (100 / app.randomSize)
             var sizeCellVwPx = sizeCell + 'vw'
           
         } else if(window.screen.width >= 500) {
             console.log('ya')
-            var sizeCell = (500 / randomSize)
+            var sizeCell = (500 / app.randomSize)
             var sizeCellVwPx = sizeCell + 'px'
         }
 
-        for(let i=0;i<(randomSize**2);i++) {
+        for(let i=0;i<(app.randomSize**2);i++) {
     
             //this part generate the grid with right size for the cell in order to take all the room
             var newCell = document.createElement('div');
@@ -136,8 +136,7 @@ app = {
             var initialTop = fruits[i].style.top //get the initial position of a fruit before moving. Useful if dragged outside the gris in order to position the fruti back to its current location>.
             var initialLeft = fruits[i].style.left
          fruits[i].addEventListener('touchmove',function(ev) {
-            
-            console.log(initialTop)
+
 
 
              var touchLocation = ev.targetTouches[0];
@@ -148,17 +147,12 @@ app = {
         //constraint to do not drag elsewhere than in the grid_________________
         fruits[i].addEventListener('touchend',function(ev) {
             var halfCell = fruits[i].clientHeight/2 //if drop is not in the grid, fruit take back its initial position
-            console.log(halfCell)
         
-            var x = parseInt(fruits[i].style.left)+parseInt(halfCell)
-            var y = parseInt(fruits[i].style.top)+parseInt(halfCell)
-            console.log(fruits[i].style.top)
-            console.log(halfCell)
-            console.log(y)
+            var x = parseFloat(fruits[i].style.left)+parseFloat(halfCell)
+            var y = parseFloat(fruits[i].style.top)+parseFloat(halfCell)
 
             var topGrid = document.querySelector('.grid').getBoundingClientRect().top
             var bottomGrid = document.querySelector('.grid').getBoundingClientRect().bottom
-            console.log(topGrid)
 
             if (topGrid> y  || bottomGrid < y ) {
                 fruits[i].style.left = initialLeft
@@ -166,6 +160,63 @@ app = {
             }
 
             //Now, we want the fruit fit perfectly in the cell according (TO BE CONTNUED)
+            var cells = document.querySelectorAll('.cell')
+            var cellsSize = parseFloat(cells[0].clientHeight)
+            var menuHeight = document.querySelector('.menu').clientHeight
+            var yNoMenu = y - menuHeight
+            console.log(yNoMenu)
+
+            
+
+
+
+
+           /*
+            for(let j=0; j<cells.length;j++) {
+                if((x/cellsSize > (j%app.randomSize)) && (x/cellsSize < (j+1)%app.randomSize)) {
+                    fruits[i].style.left = parseFloat((j%app.randomSize)*cellsSize) + 'px'
+                    console.log(j)
+                    
+
+                }
+                if(yNoMenu/cellsSize > Math.floor(j/app.randomSize) && (yNoMenu/cellsSize < Math.floor(((j/app.randomSize)+1)))) {
+                    fruits[i].style.top = menuHeight + parseFloat(Math.floor(j/app.randomSize)*cellsSize) + 'px'
+
+                    console.log(j)
+
+                }
+                
+            } 
+            */
+
+            
+            for(let j=0; j<cells.length;j++) {
+                var moduloPlus1 = (j+1)%app.randomSize
+                if(j%app.randomSize == app.randomSize-1) {
+                    moduloPlus1 = app.randomSize 
+                }   
+                if(((x/cellsSize > (j%app.randomSize)) && (x/cellsSize < moduloPlus1)) && (yNoMenu/cellsSize > Math.floor(j/app.randomSize) && (yNoMenu/cellsSize < Math.floor((j/app.randomSize)+1)))) {
+
+                    if(!cells[j].hasChildNodes()) {
+                        fruits[i].style.left = parseFloat((j%app.randomSize)*cellsSize) + 'px'
+                        fruits[i].style.top = menuHeight + parseFloat(Math.floor(j/app.randomSize)*cellsSize) + 'px'
+
+                        cells[j].appendChild(ev.target)
+                        
+                        //initialTop = fruits[i].style.top //get the initial position of a fruit before moving. Useful if dragged outside the gris in order to position the fruti back to its current location>.
+                        //initialLeft = fruits[i].style.left
+
+
+                    } else {
+                        fruits[i].style.left = initialLeft
+                        fruits[i].style.top = initialTop
+                        
+                    }
+                    
+                }
+            }
+            
+
 
 
         })
