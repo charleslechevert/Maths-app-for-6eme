@@ -11,7 +11,7 @@ a {
     background-color: var(--header-color);
     height: 20vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color : white;
     justify-content: space-around;
     align-items: center;
@@ -26,12 +26,13 @@ a {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
     text-align: center;
     background-image:  url('background_menugame.jpg');
     background-size: cover;
+
 }
 
 .game {
@@ -42,6 +43,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 800px;
 }
 
 .game__title {
@@ -59,6 +61,8 @@ a {
 .game__descr {
     text-align: right;
     font-size: 1rem;
+    line-height: 1.5rem;
+
 }
 
 .game__logo {
