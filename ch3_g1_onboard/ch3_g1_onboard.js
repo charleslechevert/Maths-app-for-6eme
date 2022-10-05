@@ -9,8 +9,8 @@ app = {
 
     },
     story() {
-        document.getElementById('story').textContent = `Au centre de l'île, il existe une source qui contient des nombres décimaux...`
-        app.text = ["Tout les pouvoirs mystiques de l'île proviendraient de cette source...", "Les nombres décimaux coulent le long d'une rivière que le capitaine a trouvé grâce à une vieille carte qu'il possède" ,"Il paraît même que les zéros inutiles peuvent se transformer en pièce d'or!!", "Aide le capitaine à obtenir des pièces, elles pourraient s'avérer utile pour la suite de l'aventure.","Pour cela, clique sur les zéros inutiles des différents nombres décimaux qui coulent le long de la rivière"];
+        document.getElementById('story').textContent = `Le capitaine est bien arrivé sur l'île qu'il recherchait`
+        app.text = ["C'est une immense jungle qui regorgent de mystère!", "Les denrées ont été toutes écoulées en mer, il faut donc se nourir." ,"Au loin, le capitaine aperçoit des marchands qui vendent les fruits de la jungle en lot.", "Le nombre de fruit par lot correpond à la longueur du carré sur lequel sont disposés les fruits.","Les marchands sont d'accord de donner au capitaine les fruits en surplus qui ne forment pas un lot complet","Aide le capitaine à trouver le nombre de fruits en surplus. Essaye de ne pas te tromper au risque que les marchands se fâchent!"];
         app.counter = 0;
         app.elem = document.getElementById('story');
         var inst = setInterval(app.change, 6000);

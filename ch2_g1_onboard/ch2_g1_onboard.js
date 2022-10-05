@@ -9,8 +9,8 @@ app = {
 
     },
     story() {
-        document.getElementById('story').textContent = 'Le captaine ne se souvient plus de ses derniers jours en mer...'
-        app.text = ["Une terrible tempête s'est abbatue au large et le voici naufragé sur une île mystérieuse", "Lui et ses perroquets sont les seuls rescapés de son équipage... :'(", "Vite il faut se ressaisir! Le capitaine a atteri sur la très hostile île des nombres décimaux...","Le capitaine a besoin de ton aide","Pour que le capitaine survive, tu vas l'aider à récuperer un maximum de denrées alimentaires!","Choisis les boîtes les plus lourdes en cliquant dessus! Good luck :)"];
+        document.getElementById('story').textContent = "Le capitaine est de retour en mer!"
+        app.text = ["Malheureusement, le capitaine ne se souvient plus où il allait.","Tant pis, cap à l'ouest!", "Pour cela il va falloir déjouer les différents ennemis en mer et trouver des alliés.","Dans un premier temps, aide le capitaine à piloter le bateau et résoudre des additions.","Les nombres correspondants aux bateaux alliés sont les solutions des différentes additions.","Les autres bateaux sont des ennemis qui feront tout pour faire exploser et couler le bateau. Prends garde et bon courage!"];
         app.counter = 0;
         app.elem = document.getElementById('story');
         var inst = setInterval(app.change, 6000);
