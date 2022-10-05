@@ -20,7 +20,7 @@ app = {
     change() {
         app.elem.textContent = app.text[app.counter];
         app.counter++;
-        if (app.counter >= app.text.length) {
+        if (app.counter >= app.text.length+1) {
 
             window.location.href = "../ch1/ch1_g1.html";
         }
