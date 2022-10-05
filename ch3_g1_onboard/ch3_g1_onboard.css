@@ -12,6 +12,14 @@ body {
   background-color: #f9cdad;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  height:90vh;
+}
+
 body p {
   
   transform: translatey(0px);
@@ -94,10 +102,9 @@ body p:after {
     width: 20vw;
     height: auto;
     max-width: 200px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15vh;
+    
 
 }
 

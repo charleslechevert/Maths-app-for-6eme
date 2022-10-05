@@ -12,6 +12,14 @@ body {
   background-color: #f9cdad;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  height:90vh;
+}
+
 body p {
   
   transform: translatey(0px);

@@ -11,6 +11,14 @@ body {
   background-color: #f9cdad;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  height:90vh;
+}
+
 body p {
   transform: translatey(0px);
   animation: float 5s ease-in-out infinite;
@@ -87,10 +95,7 @@ body p:after {
 
 
 .img {
-    position:absolute;
-    left: 20vw;
-    bottom: -10vw;
-    width: 60vw;
+    width: 30vw;
     height: auto;
     max-width: 400px;
 
