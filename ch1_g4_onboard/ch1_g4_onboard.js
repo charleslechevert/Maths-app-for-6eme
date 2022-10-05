@@ -9,8 +9,8 @@ app = {
 
     },
     story() {
-        document.getElementById('story').textContent = `Il existe un pirate`
-        app.text = ["Cependant, le capitaine a un léger problème : ses perroquets sont trop turbulents!", "Chaque perroquet possède une place précise sur l'échelle qui mène au mat du bateau" ,"Quand ils sont à leur place, les perroquets sont sages comme des images.", "Aide le perroquet à placer les perroquets sur l'échelle (c'est un peu comme un axe gradué)","Déplace les perroquets et place les au bon endroit sur l'échelle! Good luck ;)"];
+        document.getElementById('story').textContent = `Le capitaine a entendu parler d'un pirate capable de réparer n'importe quel bateau`
+        app.text = ["Cependant, ce pirate est très avare et demande une montagne de pièces d'or en échange.", "Le capitaine en a récolté énormément dans la rivière mais il lui en manque encore beaucoup." ,"Les perroquets maintenant sages, le capitaine a eu une idée géniale.", "Il s'est rappelé qu'il avait un sac de chocolat dans la cale de son bateau","Le chocolat est un denrée presque aussi rare que l'or sur l'île et il va donc vendre cette ressource sur le marché!","Aide le capitaine a vendre son chocolat sur le marché!"];
         app.counter = 0;
         app.elem = document.getElementById('story');
         var inst = setInterval(app.change, 6000);
