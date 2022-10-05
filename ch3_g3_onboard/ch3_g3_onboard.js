@@ -10,7 +10,7 @@ app = {
     },
     story() {
         document.getElementById('story').textContent = `Le capitaine aperçoit le temple!`
-        app.text = ["Mais pour y accéder, il va devoir marcher sur des dalles en béton qui recouvent un terrain marécageux.", "Certaines dalles sont fiables et solides mais d'autres ne le sont pas et le capitaine s'enfonceraient à tout jamais dans le marécage si elles sont choisies." ,"Utilise tes connaissances sur les multiples afin d'aider le capitaine à rejoindre le temple."];
+        app.text = ["Mais pour y accéder, il va devoir marcher sur des dalles en béton qui recouvent un terrain marécageux.", "Certaines dalles sont fiables et solides mais d'autres ne le sont pas et le capitaine s'enfoncerait à tout jamais dans le marécage si elles sont choisies." ,"Utilise tes connaissances sur les multiples afin d'aider le capitaine à rejoindre le temple."];
         app.counter = 0;
         app.elem = document.getElementById('story');
         var inst = setInterval(app.change, 6000);
