@@ -1,0 +1,78 @@
+[
+    {
+        "title": "De grosses boîtes...",
+        "descr": "Sélectionne la boite la plus lourde afin de récolter un maximum de denrées alimentaires!",
+        "img": "ch1/box2.png",
+        "alt": "a box",
+        "chapter": 1,
+        "id": "C1G1",
+        "stories" : ["Le captaine ne se souvient plus de ses derniers jours en mer...","Une terrible tempête s'est abbatue au large et le voici naufragé sur une île mystérieuse.", "Lui et ses perroquets sont les seuls rescapés de son équipage... :'(", "Vite il faut se ressaisir! Le capitaine a atteri sur la très hostile île des nombres décimaux...","Le capitaine a besoin de ton aide.","Pour que le capitaine survive, tu vas l'aider à récuperer un maximum de denrées alimentaires!","Choisis les boîtes les plus lourdes en cliquant dessus! Good luck :)"]
+      },
+    
+    {
+      "title": "Des zéros pas si inutiles...",
+      "descr": "Trouve les différents zéros inutiles et engrange un maximum de points!",
+      "img": "ch1_g2/coin.png",
+      "alt": "a coin",
+      "chapter": 1,
+      "id": "C1G2",
+      "stories" : ["Au centre de l'île, il existe une source qui contient des nombres décimaux...","Tout les pouvoirs mystiques de l'île proviendraient de cette source...", "Les nombres décimaux coulent le long d'une rivière que le capitaine a trouvé grâce à une vieille carte qu'il possède." ,"Il paraît même que les zéros inutiles peuvent se transformer en pièce d'or!!", "Aide le capitaine à obtenir des pièces, elles pourraient s'avérer utile pour la suite de l'aventure.","Pour cela, clique sur les zéros inutiles des différents nombres décimaux qui coulent le long de la rivière."]
+
+    },
+    {
+        "title": "Des perroquets turbulents...",
+        "descr": "Place les perroquets sur les bons barreaux de l'échelle afin de calmer leur puissantes ardeurs! <br> AIDE : tu peux voir l'échelle comme une demi-droite graduée! Clique d'abord sur le perroquet que tu souhaites déplacer puis sur le bon barreau correspondant.",
+        "img": "ch1_g3/parrot4.png",
+        "alt": "a parrot",
+        "chapter": 1,
+        "id": "C1G3",
+        "stories" : ["Maintenant, il faut réfléchir afin de trouver une solution pour quitter cette île.","Cependant, le capitaine a un léger problème : ses perroquets sont trop turbulents!", "Chaque perroquet possède une place précise sur l'échelle qui mène au mat du bateau." ,"Quand ils sont à leur place, les perroquets sont sages comme des images.", "Déplace les perroquets sur leur barreau correspondant afin que le capitaine puisse réflechir! Good luck ;)"]
+      },
+    {
+      "title": "Au marché!",
+      "descr": "Distribue la bonne quantité de chocolat aux différents clients!",
+      "img": "ch1_g4/square.jpg",
+      "alt": "a chocolate",
+      "chapter": 1,
+      "id": "C1G4",
+      "stories": ["Le capitaine a entendu parler d'un pirate capable de réparer n'importe quel bateau","Cependant, ce pirate est très avare et demande une montagne de pièces d'or en échange.", "Le capitaine en a récolté énormément dans la rivière mais il lui en manque encore beaucoup." ,"Les perroquets maintenant sages, le capitaine a eu une idée géniale.", "Il s'est rappelé qu'il avait un sac de chocolat dans la cale de son bateau","Le chocolat est une denrée presque aussi rare que l'or sur l'île et il va donc vendre cette ressource sur le marché!","Aide le capitaine a vendre son chocolat sur le marché!"]
+    },
+    {
+        "title": "Mettons les voiles...",
+        "descr": "De retour en mer, pilote le bateau tout en résolvant des additions. Pour gagner des points, il suffit de viser un bateau ami (son nombre correspond au résultat de l'addition). Si tu te trompes, ton bateau sera détruit par un bateau ennemi. <br> AIDE : tu peux piloter le bateau en tapotant ou cliquant sur l'écran.",
+        "img": "ch2_g1/boat.png",
+        "alt": "a boat",
+        "chapter": 2,
+        "id": "C2G1",
+        "stories": ["Le capitaine est de retour en mer!","Malheureusement, le capitaine ne se souvient plus où il allait.","Tant pis, cap à l'ouest!", "Pour cela il va falloir déjouer les différents ennemis en mer et trouver des alliés.","Dans un premier temps, aide le capitaine à piloter le bateau et résoudre des additions.","Les nombres correspondants aux bateaux alliés sont les solutions des différentes additions.","Les autres bateaux sont des ennemis qui feront tout pour faire exploser et couler le bateau. Prends garde et bon courage!"]
+      },
+      {
+          "title": "Les trésors de la jungle...",
+          "descr": "Trouve le reste de la division euclidienne entre le nombre de fruits (LE DIVIDENDE) et la longueur du carré sur lequel sont disposés les fruits (LE DIVISEUR) afin de récupérer un maximum de fruits! <br>AIDE: Tu peux déplacer les fruits en les faisant glisser à l'aide de ton doigt ou ta souris. Cela peut être utile afin de former des lots de fruits.",
+          "img": "ch3_g1/fruit5.png",
+          "alt": "a watermelon",
+          "chapter": 3,
+          "id": "C3G1",
+          "stories": ["Le capitaine est bien arrivé sur l'île qu'il recherchait","C'est une immense jungle qui regorge de mystère!", "Les denrées ont été toutes écoulées en mer., il faut donc se nourir." ,"Au loin, le capitaine aperçoit des marchands qui vendent les fruits de la jungle en lot.", "Le nombre de fruit par lot correspond à la longueur du carré sur lequel sont disposés les fruits.","Les marchands sont d'accord de donner au capitaine les fruits en surplus qui ne forment pas un lot complet.","Aide le capitaine à trouver le nombre de fruits en surplus.","Tu peux déplacer les fruits afin de les réorganiser sur le carré!"]
+        },
+      {
+        "title": "Saut de multiples...",
+        "descr": "Aide le capitaine à traverser le cours d'eau en sautant sur les bons rondins de bois. Pour cela il va falloir que tu trouves les multiples des nombres que l'on te donne!",
+        "img": "ch3_g2/log.png",
+        "alt": "a log",
+        "chapter": 3,
+        "id": "C3G2",
+        "stories": ["Le capitaine a décidé de s'aventurer dans la jungle!","La légende raconte qu'il existe un temple qui abrite un trésor!", "Personne n'a jamais trouvé ce temple car le chemin pour y accéder est périlleux." ,"Après quelques heures de marche, le capitaine tombe nez à nez avec un cours d'eau", "Pour le traverser, il faut sauter sur des rondins de bois en mouvement.","utilise ta connaissance sur les multiples afin d'aider le capitaine à traverser cette épreuve."]
+      },
+      {
+          "title": "A deux pas du temple...",
+          "descr": "Grâce à ta conaissance sur les multiples, aide le capitaine à traverser le marécage qui mène au temple perdu...",
+          "img": "ch3_g3/vortex2.png",
+          "alt": "a vortex",
+          "chapter": 3,
+          "id": "C3G3",
+          "stories": ["Le capitaine aperçoit le temple!","Mais pour y accéder, il va devoir marcher sur des dalles en béton qui recouvent un terrain marécageux.", "Certaines dalles sont fiables et solides mais d'autres ne le sont pas et le capitaine s'enfoncerait à tout jamais dans le marécage si elles sont choisies." ,"Utilise tes connaissances sur les multiples afin d'aider le capitaine à rejoindre le temple."]
+        }
+
+
+  ]

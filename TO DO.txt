@@ -1,2 +1,0 @@
-1.For Onboard . Get a function doing everything with parameter to enter
-2.Automate timer / start / innerHeight???

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/story/story.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2:400,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Arvo&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <title>Une île décimale...</title>
+    <script src="/story/story.js" defer></script>
+</head>
+
+<body>
+    <header class="menu">
+
+    </header>
+
+
+    <div class="wrapper">
+    
+        <div class="story__container">
+        <% for (story of stories) { %>  
+            <p id="story"><%= story %></p>
+        <% } %>
+        </div>
+
+        
+
+        <div class ='nav-container'>
+            
+            <a href="../index.html">
+                <img class="nav" id="back" src="/story/back.png" alt="">
+            </a>
+
+            <a href="../ch1/ch1_g1.html">
+                <img class="nav" id="skip" src="/story/skip2.png" alt="">
+            </a>
+
+        </div>
+
+
+        <img class = 'img' src="/story/boat2.png" alt="">
+    
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+/*MAIN______________________________________________________*/
+
+main {
+    background-image: url('/C3G2/background.jpg');
+    background-size:cover; 
+    height: 90vh; /*Not 100 because header is taking already 10 */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    overflow: hidden;
+}
+.number-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left:-1500vw;
+    position:relative;
+    width: 1500vw;
+    /*animation : slide-right 100s linear infinite; */
+    overflow: hidden;
+
+}
+
+
+
+@keyframes slide-right {
+    from {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
+      to {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+      }
+}
+
+@keyframes slide-left {
+    from {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+      }
+      to {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
+}
+
+.plouf {
+    transition-duration: 0.5s;
+    transform : scale(0) rotate(720deg);
+    
+}
+
+
+.number { /*Manage */
+    height: 12vh;
+    width:12vh;
+    text-align:center;
+    background-image: url('/C3G2/log.png');
+    background-size: cover;
+    font-size: 6vh;
+    font-family: 'Nabla', cursive;
+    
+
+}
+
+.footer {
+    flex-grow:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.sprite {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.multiple {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sprite-container {
+    width: 100%;
+
+
+
+}
+
+.sprite-img {
+    height: 12vh;
+    width:12vh;
+}
+
+.multiple__text {
+    font-size:4vh;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Nabla', cursive;
+    text-align: center;
+    
+}
+
+.multiple__number {
+    font-family: 'Nabla', cursive;
+    font-size: 10vh;
+    text-align: center;
+}
+
+

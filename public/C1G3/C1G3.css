@@ -1,0 +1,155 @@
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(64, 60, 57);
+    position:relative;
+    width: 100%;
+    z-index:1000000;
+}
+
+
+.main {
+    overflow: hidden;
+    background-image:  url('/C1G3/ch1_g3_background.jpg');
+    background-size: cover;
+    height: 90vh;
+
+
+}
+
+.main__parrots {
+    width:28vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:100%
+}
+
+.parrot__container {
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.parrot__img {
+    width: 80%;
+    max-width: 170px;
+}
+
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
+
+
+
+
+.parrot__number {
+    text-align: center;
+    color: black;
+    font-family: 'Fruktur', cursive;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
+    font-size: 1.4rem;
+
+}
+
+
+.main__numbers {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top:-300vh;
+    left:35vw;
+    position:relative;
+    height: 300vh;
+
+}
+
+
+
+
+
+
+    
+
+
+@keyframes slide-bottom {
+    from {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+      }
+      to {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+      }
+    
+
+}
+
+.number__ladder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:65vw;
+    max-width: 500px;
+    z-index: 10;
+
+}
+
+.ladder__container {
+    width:80%;
+    
+    
+
+}
+
+.ladder {
+    width: 100%;
+    position: relative;
+    max-width: 400px;
+
+    
+}
+
+.ladder-stick__img {
+    position: fixed;
+    width: 50%;
+    max-width: 400px;
+}
+
+.number {
+    color: black;
+    width:20%;
+    padding-left:1rem;
+    font-size: 2.5rem;
+    font-family: 'Fruktur', cursive;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
+
+}
+
+#number--hidden {
+    color: transparent;
+    -webkit-text-stroke: none;
+    font-family: 'Fruktur', cursive;
+    -webkit-text-stroke: 0px rgb(202, 80, 80);
+}
+
+.parrot__img-onladder {
+
+    position: absolute;
+    z-index:1000;
+    width:25%;
+
+}

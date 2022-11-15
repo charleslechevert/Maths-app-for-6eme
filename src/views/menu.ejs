@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Arvo&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="menu/menu.css">
+    <title>Chapitre 1</title>
+</head>
+<body>
+    <header class="menu">
+        <a href="../index.html" class="menu__start">Retour</a>
+    </header>
+    <section class="container">
+
+        
+        <% for(game of games) { %>
+        <a class="game" href="../ch1_g1_onboard/ch1_g1_onboard.html">
+            <div class="game__text">
+                <h2 class="game__title"> <%= game.title %></h2>
+                <p class="game__descr"><%= game.descr %></p>
+            </div>
+            <div class="game__logo">
+                <img class="logo__img" src="../ch1/box2.png" alt= <%= game.alt %>>
+            </div>
+        </a>
+        <% } %>
+
+   
+
+    </section>
+
+    
+</body>
+</html>

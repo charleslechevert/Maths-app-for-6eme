@@ -1,0 +1,112 @@
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 500px;
+
+
+
+    
+}
+
+.cell {
+    display: inline-block;
+    box-sizing: border-box;
+    background-image: url('/C3G1/container2.png');
+    background-size: cover;
+}
+
+.grid {
+    
+    background-position: cover;
+    background-size: auto 100% ;
+}
+
+/*For drag and drop */
+
+.fill {
+  
+  cursor: pointer;
+  height: 40px;
+  width:40px;
+  background-image: url('/C3G1/fruit1.png');
+  background-size: cover;
+  touch-action: none;
+  
+  
+}
+
+
+
+
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
+
+.invisible {
+    display:none;
+}
+
+/*Pad style */
+
+.pad {
+    margin-top : 4vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items:center
+    
+}
+
+.numberButton{
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 6vh ;
+    width: 15%;
+    margin: 2%;
+    height: 6vh;
+    font-size: 4vh;
+    border-radius: 10%;
+    border:3px solid rgb(6, 53, 11);
+    background-color: rgb(57, 54, 51);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    
+
+}
+
+.waitForGame {
+    background-image: url('/C3G1/background.jpg');
+    background-size: 350%;
+
+    
+}
+
+@media (min-width: 500px) {
+    .grid {
+        max-width:500px;   
+    }
+    .numberButton {
+        width: 8%;
+        margin: 1%;
+
+    }
+  }
+
