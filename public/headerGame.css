@@ -1,0 +1,62 @@
+html {
+    font-family: 'Krona One', sans-serif;
+}
+
+.menu {
+    background-color: rgb(57, 54, 54);
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    color : white;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu__start {
+    font-size: 3vh;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.6rem 0.6rem;
+    font-weight: bold;
+    background-color: rgb(244, 167, 162);
+    border-radius: 10px;
+    box-shadow: 8px 4px rgb(195, 131, 127);
+    
+
+}
+
+.menu__score-container, .menu__countdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.menu__score, .menu__countdown {
+    font-size: 3vh;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    
+
+}
+
+.menu__score-text, .menu__countdown-text {
+    font-size: 1.5vh;
+    color: rgb(211, 211, 211);
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+
+
+
+
+
+
+
+

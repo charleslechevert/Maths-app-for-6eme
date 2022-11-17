@@ -1,3 +1,4 @@
+games = require("../../data/games.json");
 
 const menuController = {
     renderMenuPage(req, res, next) {

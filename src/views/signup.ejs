@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/admin/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <section class = "sign">
+        <form class="sign__container" method="post">
+            <h2 class="sign__title">S'inscrire</h2>
+            <label class="sign__label" for="fname">Prénom</label>
+            <input class="sign__input" type="text" name="fname" id="fname">
+            <label class="sign__label" for="lname">Nom</label>
+            <input class="sign__input" type="text" name="lname" id="lname">
+            <label class="sign__label" for="pseudo">Pseudo</label>
+            <input class="sign__input" type="text" name="pseudo" id="pseudo">
+            <label class="sign__label" for="email">Adresse email</label>
+            <input class="sign__input" type="text" name="email" id="email">
+            <label class="sign__label" for="password">Mot de passe</label>
+            <input class="sign__input" type="password" name="password" id="password">
+            <label class="sign__label" for="confirmPassword">Confirmer le mot de passe</label>
+            <input class="sign__input" type="password" name="confirmPassword" id="confirmPassword">
+
+            <!--Error management back-->
+
+            <% if(locals.errorMessage) { %>
+                <p class="sign__error"><%= errorMessage %></p>
+            <%  } %>
+
+
+            <% if(locals.errorMessages) { 
+                for(errorMessage of errorMessages) { %>
+                <p class="sign__error"><%= errorMessage.message %></p>
+            <% } } %>
+
+
+            <button type="submit" class="sign__validate">Valider</button>
+            <a href="/signin" class="sign__redirect">Déjà un compte? Connecte-toi</a>
+        </form>
+        
+        
+
+          
+    </section>
+        
+
+    
+</body>
+</html>

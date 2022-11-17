@@ -33,7 +33,7 @@ function popup(countScore) {
     theScore.style.textAlign = "center"
 
     const logo = document.createElement('img')
-    logo.src = '../menu/logo.png'
+    logo.src = '/logo.png'
     logo.classList.add('logo')
     popup.append(logo)
     logo.style.height = '15vh'
