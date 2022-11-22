@@ -1,29 +1,9 @@
-html {
-    font-family: 'Krona One', sans-serif;
 
-}
 
 a {
     text-decoration: none;
 }
 
-.menu {
-    
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    color : white;
-    justify-content: space-around;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    background-color: rgb(58, 58, 60);
-
-}
-
-.menu__start {
-    color: white;
-}
 
 .container {
     display: flex;
@@ -45,6 +25,8 @@ a {
     flex-direction: row;
     align-items: center;
     max-width: 800px;
+    width: 80vw;
+    border-radius: 6px;
 }
 
 .game__title {
@@ -56,12 +38,14 @@ a {
 
 .game__text {
     width: 60%;
+    
 
 }
 
 .game__descr {
     text-align: right;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    font-weight:100;
     line-height: 1.5rem;
 
 }
@@ -69,11 +53,9 @@ a {
 .game__logo {
     width: 40%;
     
-
 }
-
 .logo__img {
-    width:50%;
+    width : 5vh;
     min-width:100px;
     height: auto;
 }

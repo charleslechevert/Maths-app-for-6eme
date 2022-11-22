@@ -1,6 +1,8 @@
+chapters = require("../../data/chapters.json");
+
 const mainController = {
     renderHomePage(req, res) {
-      res.render("index");
+      res.render("index",{chapters : chapters});
     }
   };
   

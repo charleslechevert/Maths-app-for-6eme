@@ -4,12 +4,29 @@ const bcrypt = require('bcrypt');
 
 const adminController = {
     renderSignupPage(req, res) {
-      res.render("signup");
+      if(!req.session.pseudo) {
+        res.render("signup");
+      } else {
+        res.redirect('/');
+      }
     },
+
     renderSigninPage(req, res) {
-      res.render("signin");
+      if(!req.session.pseudo) {
+        res.render("signin");
+      } else {
+        res.redirect('/');
+      }
     },
-    async addPlayer(req,res) {
+    renderSignOutPage(req, res) {
+      if(req.session.pseudo) {
+        res.render("signout");
+      } else {
+        res.redirect('/');
+      }
+    },
+
+    async addPlayer(req,res,next) {
 
       const playerEmail = await Player.findByEmail(req.body.email);
       if(playerEmail) {
@@ -50,9 +67,10 @@ const adminController = {
 
       try {
         const addplayer = await Player.create(req.body)
-        
         // Comme il a créer son compte, on peut automatiquement le logger
-        req.session.userId = addplayer.id
+        req.session.playerId = addplayer.id;
+        req.session.pseudo = addplayer.pseudo
+
       } catch(e) { 
 
       if(e.errors[0]?.message) {
@@ -64,7 +82,52 @@ const adminController = {
       
     }
       res.redirect('/')
+    },
+
+    async signinPlayer(req,res) {
+      const {identifier, password} = req.body;
+
+      console.log(identifier)
+      let player = await Player.findByEmail(identifier);
+      if(!player) {
+        const player = await Player.findOne({
+          where: { pseudo: identifier },
+        });
+      }
+      
+
+      if(!(player)) {
+        res.render('signin', {
+          errorMessage: 'Mauvais identifiant. Veuillez réessayer!'
+        });
+        return;
     }
+
+        // bcrypt.compare va nous permettre de vérifier si le mot de passe renseigner dans le formulaire correspond à celui de l'utilisateur en BDD. Le mot de passe en BDD est déjà hasher.
+        const hasPasswordMatched = await bcrypt.compare(password, player.password);
+
+        if(!hasPasswordMatched) {
+          res.render('signin', {
+            errorMessage: 'Mauvais identifiant. Veuillez réessayer!'
+          });
+          return;
+        }
+        req.session.playerId = player.id;
+        req.session.pseudo = player.pseudo
+        // 4 - On redirige sur la page d'accueil
+        res.redirect('/');
+
+  },
+  async signOutPlayer(req,res) {
+
+    req.session.destroy()
+    res.redirect('/');
+
+  }
+  
+  
+ 
+
   };
   
   module.exports = adminController;

@@ -1,17 +1,23 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/admin/style.css">
 
+    
     <section class = "sign">
+        <form method="post">
         <div class="sign__container">
-            <h2 class="sign__title">Se connecter</h2>
-            <label class="sign__label" for="identifier">Email ou pseudo</label>
-            <input class="sign__input" type="text" name="identifier" id="">
-            <label class="sign__label" for="password">Mot de passe</label>
-            <input class="sign__input" type="text" name="password" id="">
-            <button class="sign__validate">Valider</button>
-            <a href="/signup" class="sign__redirect">Pas de compte? Inscris-toi</a>
- 
+            
+                <h2 class="sign__title">Se connecter</h2>
+                <label class="sign__label" for="identifier">Email ou pseudo</label>
+                <input class="sign__input" type="text" name="identifier" id="">
+                <label class="sign__label" for="password">Mot de passe</label>
+                <input class="sign__input" type="password" name="password" id=""> 
+                <% if(locals.errorMessage) { %>
+                    <p class="sign__error"><%= errorMessage%></p>
+                <% } %>  
+                <button class="sign__validate">Valider</button>
+                <a href="/signup" class="sign__redirect">Pas de compte? Inscris-toi</a>
         </div>
+    </form>
 
           
     </section>

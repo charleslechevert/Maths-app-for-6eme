@@ -1,4 +1,7 @@
 <%- include('partials/headerGame') %>
+<%- include('partials/modalStartGame') %>
+<%- include('partials/modalEndGame') %>
+
 <body class="waitForGame">
 
     <main>
@@ -7,6 +10,10 @@
 
         </section>
     </main>
+    <form action="/register" name="score__form" method="post">
+        <input type="hidden" class="hiddenInput" name="score" id="score">
+        <input type="hidden" class="hiddenInput" name="game_id" id="game_id" value="<%=gameID%>">
+    </form>
     
 </body>
 </html>

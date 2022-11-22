@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/modalGame.css">
+
+<section class="modal__container--start">
+    <div class="modal__descr-container--start">
+        <div class="modal__descr--start"><%= game.descr %></div>
+        <img class="modal__descr-img--start" src="/<%=game.id%>/<%=game.img%>" alt="">
+    </div>
+    
+    
+    <% if(playerId) { %>
+        <div class="modal__record-container--start">
+            <p class="modal__record-pseudo--start"><%= pseudo %></p>
+            <p class="modal__record-text--start">TOP 1 : 17</p>
+        </div>
+       
+    <% } else { %>
+        <a  href="/signin" class="modal__signin--start">Se connecter</a>
+    <% } %>
+       
+
+    
+    
+    <div class="modal__nav--start">
+        <a class="modal__nav--text--start" href="/">Retour</a>
+        <p class="menu__start" id="start">GO!</p>
+        <p class="modal__nav--text--start">Aide</p>
+    </div>
+    
+</section>
+

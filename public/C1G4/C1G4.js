@@ -22,7 +22,7 @@ app = {
             
             if ( app.startState==false) { //state manage the fact you can only once press start
                 app.startState = true;
-                document.getElementById('start').style.color = 'transparent';
+                document.querySelector('.modal__container--start').style.display = 'none';
                 app.secondIntervall = setInterval(app.timer,1000);
                 app.secondIntervall
                 app.createGrid()
@@ -46,7 +46,11 @@ app = {
                 }
             }
 
-            popup(app.countScore)
+            modalEndGame(app.countScore)
+            var input = document.querySelector('.hiddenInput');
+            input.value = app.countScore
+            console.log(input.value)
+            document.score__form.submit();
             return app.timer;
             //location.reload();
     

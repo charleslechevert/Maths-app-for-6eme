@@ -1,58 +1,23 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/index/style.css">
+<main>
+
+
 
     <div class = "chapters">
-
+      <% for(chapter of chapters) { %>
         <div class="nav">
             <input type="checkbox">
               <span></span>
               <span></span>
               <div class="menu">
-                <li><a href="ch1_menu/ch1_menu.html">Chapitre 1 - Une île décimale</a></li>
+                <li><a href="/chapter/<%= chapter.position %>">Chapitre <%= chapter.position %> - <%= chapter.title %>  </a></li>
               </div>
         </div>
-
-        <div class="nav">
-            <input type="checkbox">
-              <span></span>
-              <span></span>
-              <div class="menu">
-                <li><a href="ch2_menu/ch2_menu.html">Chapitre 2 - Voyage vers de nouvelles mers</a></li>
-              </div>
-        </div>
-
-        <div class="nav">
-            <input type="checkbox">
-              <span></span>
-              <span></span>
-              <div class="menu">
-                <li><a href="ch3_menu/ch3_menu.html">Chapitre 3 - Le secret de la jungle</a></li>
-              </div>
-        </div>
-
-        <div class="nav">
-            <input type="checkbox">
-              <span></span>
-              <span></span>
-              <div class="menu">
-                <li><a href="#">Disponible bientôt</a></li>
-              </div>
-        </div>
-
-        <div class="nav">
-            <input type="checkbox">
-              <span></span>
-              <span></span>
-              <div class="menu">
-                <li><a href="#">Disponible bientôt</a></li>
-              </div>
-        </div>
-          
-
+        <% } %>  
 
     </div>
-        
 
-    
+</main>  
 </body>
 </html>

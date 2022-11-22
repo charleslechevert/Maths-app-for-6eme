@@ -13,19 +13,6 @@ html {
 
 }
 
-.menu__start {
-    font-size: 3vh;
-    color: white;
-    text-transform: uppercase;
-    padding: 0.6rem 0.6rem;
-    font-weight: bold;
-    background-color: rgb(244, 167, 162);
-    border-radius: 10px;
-    box-shadow: 8px 4px rgb(195, 131, 127);
-    
-
-}
-
 .menu__score-container, .menu__countdown-container {
     display: flex;
     flex-direction: column;

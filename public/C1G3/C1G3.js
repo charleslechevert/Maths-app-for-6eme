@@ -31,6 +31,7 @@ app = {
   },
   selectParrot() {
     var imgs = document.querySelectorAll('.parrot__img')
+    console.log('length')
     for(let i = 0; i<imgs.length;i++) {
       imgs[i].addEventListener('click', (event)=> {
 
@@ -66,8 +67,10 @@ app = {
       })
 
     }
+    console.log('OKI')
   },
   selectLadder() {
+    
     var ladders = document.querySelectorAll('.number__ladder')
     for(let i=0;i<ladders.length;i++) {
       ladders[i].addEventListener('click', (event)=> {
@@ -122,7 +125,7 @@ app = {
     document.getElementById('start').addEventListener('click',()=> {
       if (app.state==false) { //state manage the fact you can only once press start
         app.state = true;
-        document.getElementById('start').style.color = 'transparent';
+        document.querySelector('.modal__container--start').style.display = 'none';
         document.querySelector('.main__numbers').style.animation="slide-bottom 42s linear";
         app.secondsIntervall = setInterval(app.timer,1000);
         app.secondsIntervall
@@ -139,9 +142,13 @@ app = {
     document.getElementById('countdown').innerHTML = app.countdown;
 
     if (app.countdown==0) {
+      console.log('check')
         clearInterval(app.secondsIntervall);
-        console.log('ya')
-        popup(app.countScore)
+        modalEndGame(app.countScore)
+        var input = document.querySelector('.hiddenInput');
+          input.value = app.countScore
+          console.log(input.value)
+          document.score__form.submit();
        
 
     } else {

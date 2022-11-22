@@ -20,7 +20,7 @@
     <div class="wrapper">
     
         <div class="story__container">
-        <% for (story of stories) { %>  
+        <% for (story of game.stories) { %>  
             <p id="story"><%= story %></p>
         <% } %>
         </div>
@@ -29,11 +29,11 @@
 
         <div class ='nav-container'>
             
-            <a href="../index.html">
+            <a href="/">
                 <img class="nav" id="back" src="/story/back.png" alt="">
             </a>
 
-            <a href="../ch1/ch1_g1.html">
+            <a href="/game/<%=game.id%>">
                 <img class="nav" id="skip" src="/story/skip2.png" alt="">
             </a>
 

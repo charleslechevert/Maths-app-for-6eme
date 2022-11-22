@@ -10,7 +10,7 @@ html {
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
-    font-size: 1.2vh;
+    font-size: 1.5vh;
     height: 10vh;
 }
 
@@ -45,15 +45,83 @@ html {
     background-color: white;
     color: rgb(56, 54, 54);
     border-radius: 10px;
-    padding : 0.6rem 1rem;
+    padding : 1vh 1rem;
     text-decoration: none;
+    font-size: 1vh;
 }
 
 .header__signin {
     border: 1px solid white;
-    padding : 0.6rem 1rem;
+    padding : 1vh 1rem;
     border-radius: 10px;
     color: white;
     text-decoration: none;
+    font-size: 1vh;
 
 }
+
+.header__online--text {
+    color: white;
+    font-size: 1.5vh;
+    z-index: 10;
+    position: relative;
+}
+
+.header__online--button {
+    width: 1.2vh;
+    height: 1.2vh;
+    background-color: rgb(173, 242, 70);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -0.9vh;
+    right: 1.3vh;
+    z-index:9;
+}
+
+.header__online--container {
+ position: relative;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color :rgb(56,54,54);
+    color:white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 400px;
+    width: 60vw;
+    border-bottom-left-radius: 10px;
+
+  }
+
+  .dropdown__link {
+    
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin:1.5vh;
+
+  }
+
+  .show {
+    display: flex;
+  }
+
+
+

@@ -111,6 +111,8 @@ html {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid black;
     margin-bottom:1rem;
+    width: 80%;
+    text-align: center;
 }
 
 .sign__error {
@@ -119,5 +121,36 @@ html {
     padding: 0.5rem 0;
 }
 
+.signout-answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    font-size: 2vh;
+}
 
+.signout-yes {
+    background-color: rgb(162, 225, 154);
+    border: none;
+    box-shadow: 2px 2px rgb(56, 54, 54);
+    border-radius: 7px;
+    padding: 1vh;
+    color:  white;
+    font-family: 'Krona One', sans-serif;
+    font-size: 2vh;
+
+}
+
+.signout-no {
+    text-decoration: none;
+    background-color: rgb(226, 116, 108);
+    border: none;
+    box-shadow: 2px 2px rgb(56, 54, 54);
+    border-radius: 7px;
+    padding: 1.2vh 1vh 0.8vh 1vh;
+    color:  white;
+    font-size: 2vh;
+    
+
+}
 

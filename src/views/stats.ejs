@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/stats/stats.css">
+<body>
+<main>
+    <h1 class="stats__title">SCORES DE <%=pseudo%></h1>
+    <section class="games__container">
+        <% for(game of games) { %>
+        <div class="game__container">
+            <img class="game__img" src="/<%=game.id%>/<%=game.img%>" alt= <%= game.alt %>>
+            <p class="game__text"><%=game.title%></p>
+            <% if(registers.find(register => register.game_id == game.id)) { %>
+                    <p class="game__score"><%= registers.find(register => register.game_id == game.id).max %></p>
+                <% } else { %> 
+                    <p class="game__score">0</p>
+                    <% } %>  
+        </div>
+        <% } %>
+
+    </section>
+
+
+    
+</main> 
+</body>
+</html>
+

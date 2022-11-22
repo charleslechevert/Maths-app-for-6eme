@@ -6,7 +6,7 @@ app = {
     countScore : 0,
     clicked : [false,false,false,false,false,false,false],
     state : false,
-    countdown: 40,
+    countdown: 2,
     secondIntervall:0,
     doubleClick: [false, false, false, false, false, false, false],
     generateNumber() {
@@ -204,6 +204,8 @@ app = {
             if (app.state==false) { //state manage the fact you can only once press start
                 app.state = true;
                 document.getElementById('start').style.color = 'transparent';
+                document.getElementById('coma').textContent = ',';
+                document.querySelector('.modal__container--start').style.display ="none"
                 document.getElementById('number').style.animation="block 3s infinite linear";
                 app.secondIntervall = setInterval(app.timer,1000);
                 app.secondIntervall
@@ -237,9 +239,12 @@ app = {
                 }
             }
 
-
-
-            popup(app.countScore);
+    
+            modalEndGame(app.countScore);
+            var input = document.querySelector('.hiddenInput');
+            input.value = app.countScore
+            console.log(input.value)
+            document.score__form.submit();
     
         }
         app.countdown--;

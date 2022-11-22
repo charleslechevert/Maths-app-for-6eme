@@ -22,6 +22,12 @@ app.set("views", "./src/views"); // Choisir le dossier des views comme étant `v
 
 app.use(express.urlencoded({ extended: true }));
 
+app.use(function(req, res, next) {
+  res.locals.playerId = req.session.playerId;
+  res.locals.pseudo = req.session.pseudo;
+  next();
+});
+
 app.use(router);
 
 const port = process.env.PORT || 3000;

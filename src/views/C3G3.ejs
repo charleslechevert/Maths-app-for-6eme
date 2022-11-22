@@ -1,4 +1,6 @@
 <%- include('partials/headerGame') %>
+<%- include('partials/modalStartGame') %>
+<%- include('partials/modalEndGame') %>
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Press+Start+2P&display=swap" rel="stylesheet">    <link rel="stylesheet" >
 
 
@@ -12,6 +14,10 @@
                 <p class="divisor__number">4</p>
         </section>
     </main>
+    <form action="/register" name="score__form" method="post">
+        <input type="hidden" class="hiddenInput" name="score" id="score">
+        <input type="hidden" class="hiddenInput" name="game_id" id="game_id" value="<%=gameID%>">
+    </form>
     
 </body>
 </html>

@@ -1,4 +1,7 @@
 <%- include('partials/headerGame') %>
+<%- include('partials/modalStartGame') %>
+<%- include('partials/modalEndGame') %>
+
 
     <main class="main">
         <div class="box-container">
@@ -17,12 +20,12 @@
             <article class="box">
                 <p class="box__number" id="random_value4">???</p>
             </article>
-
         </div>
-
-
-
     </main>
+    <form action="/register" name="score__form" method="post">
+    <input type="hidden" class="hiddenInput" name="score" id="score">
+    <input type="hidden" class="hiddenInput" name="game_id" id="game_id" value="<%=gameID%>">
+    </form>
 
 
 

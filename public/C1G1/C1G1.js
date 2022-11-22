@@ -2,18 +2,18 @@
 app = {
     countScore : 0,
     correctAnswer : 0,
-    countdown : 30,
+    countdown : 2,
     playerValue : 0,
     secondIntervall : '',
     startGame() {
         state=true;
         if (state) {
-            document.querySelector('.menu__start').addEventListener('click', () => { 
+            document.querySelector('#start').addEventListener('click', () => {
+            document.querySelector('.modal__container--start').style.display = 'none'; 
             app.secondIntervall= setInterval(app.timer,1000);
             app.secondIntervall;
             app.reset();
             app.getvalue();
-            document.querySelector('.menu__start').textContent = '';
             state=false;
             })
 
@@ -83,7 +83,11 @@ app = {
         
         if (app.countdown==0) {
             clearInterval(app.secondIntervall);
-            popup(app.countScore);
+            modalEndGame(app.countScore);
+            var input = document.querySelector('.hiddenInput');
+            input.value = app.countScore
+            console.log(input.value)
+            document.score__form.submit();
             
         } else {
             app.countdown--;

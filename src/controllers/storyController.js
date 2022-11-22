@@ -7,7 +7,7 @@ const storyController = {
             const gameFound = games.find((game) => game.id == story);
             if(gameFound){
                 console.log(gameFound)
-                res.render("story", {stories: gameFound.stories})
+                res.render("story", {game: gameFound})
                 return
             }
             // en appelant la fonction next on transmet la requête au MW suivant
