@@ -88,12 +88,15 @@ const adminController = {
       const {identifier, password} = req.body;
 
       console.log(identifier)
-      let player = await Player.findByEmail(identifier);
+      var player = await Player.findByEmail(identifier);
+      
       if(!player) {
-        const player = await Player.findOne({
-          where: { pseudo: identifier },
+      var player = await Player.findOne({
+           pseudo: identifier 
         });
+
       }
+      
       
 
       if(!(player)) {

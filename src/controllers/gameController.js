@@ -1,12 +1,19 @@
 games = require("../../data/games.json");
 const { Register } = require("../models");
+const { Sequelize } = require('sequelize');
 
 const gameController = {
-    renderGamePage(req, res) {
+    async renderGamePage(req, res) {
     const gameID = req.params.game;
     game = games.find(game => game.id == gameID)
 
-      res.render(`${gameID}`, {gameID : gameID, game : game });
+    const score = await Register.findOne({
+      where : { game_id : gameID },
+      attributes: [Sequelize.fn('max', Sequelize.col('score'))],
+      raw: true,
+    });
+
+      res.render(`${gameID}`, {gameID, game, score });
     },
     async addRegister(req,res) {
       req.body.player_id = req.session.playerId;

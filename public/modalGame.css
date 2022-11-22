@@ -97,6 +97,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    font-size: 1.8vh;
     
 }
 
@@ -121,6 +122,7 @@
     background-color: rgb(244, 167, 162);
     border-radius: 10px;
     box-shadow: 8px 4px rgb(195, 131, 127);
+    font-size: 2.5vh;
 }
 
 .modal__record-container--start {
@@ -129,12 +131,12 @@
     justify-content:center;
     align-items: center;
     width: 100%;
-    font-size: 1.5vh;
+    font-size: 1.8vh;
     
 }
 
 .modal__record-text--start {
-    background-color: rgb(163, 210, 169);
+    background-color: rgb(131, 192, 139);
     padding: 1vh;
     border-radius: 9px;
 }
@@ -159,6 +161,7 @@
     justify-content: space-around;
     align-items: center;
     width: 90%;
+    font-size: 1.7vh;
 
 }
 
