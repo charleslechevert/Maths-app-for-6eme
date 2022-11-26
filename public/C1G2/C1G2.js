@@ -6,7 +6,7 @@ app = {
     countScore : 0,
     clicked : [false,false,false,false,false,false,false],
     state : false,
-    countdown: 2,
+    countdown: 40,
     secondIntervall:0,
     doubleClick: [false, false, false, false, false, false, false],
     generateNumber() {

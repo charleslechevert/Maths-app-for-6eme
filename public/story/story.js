@@ -7,7 +7,6 @@ app = {
     init() {
         console.log(app.stories.length)
         addEventListener('load', app.story)
-        app.buttonClick()
         
 
     },
@@ -20,7 +19,8 @@ app = {
 
     change() {
         if (app.counter >= app.stories.length-1) {
-            window.location.href = "../ch1/ch1_g1.html";
+            console.log(window.location.href)
+            window.location.href = `/game/${window.location.href.slice(-4)}`;
         }
         app.stories[app.counter].style.display = ''
         app.counter++;
@@ -30,17 +30,6 @@ app = {
 
         
     },
-    buttonClick() {
-        document.getElementById('back').addEventListener('click', (event) => {
-            window.location.href = "../menu/html/index.html"
-
-        })
-
-        document.getElementById('skip').addEventListener('click', (event) => {
-            window.location.href = "../ch1/ch1_g1.html"
-
-        })
-    }
 
 }
 

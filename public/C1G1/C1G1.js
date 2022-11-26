@@ -2,7 +2,7 @@
 app = {
     countScore : 0,
     correctAnswer : 0,
-    countdown : 2,
+    countdown : 30,
     playerValue : 0,
     secondIntervall : '',
     startGame() {
