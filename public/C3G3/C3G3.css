@@ -18,6 +18,10 @@ main {
     flex-direction: column;
     justify-content: space-around;
     height: 90vh;
+    user-select:none;
+    -ms-user-selec:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
 
 }
 

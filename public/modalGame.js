@@ -10,6 +10,7 @@ document.querySelector('#modal__again').addEventListener('click',()=> {
     location.reload()
 })
 
+/*
 
 mouseCursor = document.querySelector('.cursor')
 
@@ -35,3 +36,4 @@ function clicked(e) {
 
 }
 
+*/

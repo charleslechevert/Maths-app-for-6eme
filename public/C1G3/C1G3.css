@@ -18,6 +18,10 @@
     background-image:  url('/C1G3/ch1_g3_background.jpg');
     background-size: cover;
     height: 90vh;
+    user-select:none;
+    -ms-user-selec:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
 
 
 }

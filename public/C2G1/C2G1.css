@@ -100,6 +100,7 @@ html {
     margin-bottom: auto;
     width: 15vw;
     margin-right: 8vw;
+    
 
 }
 
@@ -111,5 +112,12 @@ html {
     z-index:10;
 
 
+}
+
+.selectDisable {
+    user-select:none;
+    -ms-user-selec:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
 }
 

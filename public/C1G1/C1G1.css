@@ -3,8 +3,9 @@ html {
 }
 
 
+
 .main {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-image: url('floor.png');
     background-size: auto 100%;
@@ -14,6 +15,10 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+    user-select:none;
+    -ms-user-selec:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
     
 
     
