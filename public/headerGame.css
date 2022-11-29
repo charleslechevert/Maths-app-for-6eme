@@ -39,6 +39,50 @@ html {
     
 }
 
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: burlywood;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    z-index:10;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+
+
+}
+
+.nail {
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: rgb(240, 238, 204);
+    border-radius: 50%;
+    border-radius:1.25rem 1.25rem 0 0;
+    margin-left: 0.25rem;
+    margin-top : 0.25rem;
+}
+
+body {
+    cursor : none;
+    color:rgb(134, 96, 56)
+}
+
+.linefinger {
+    height: 2px;
+    width: 1.5rem;
+    margin: 0.2rem auto;
+    background-color: rgb(114, 114, 114);
+}
+
+.linefinger-cont {
+    margin-top: 0.3rem;
+}
+
+
+
+
 
 
 

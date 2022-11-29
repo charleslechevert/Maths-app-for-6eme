@@ -10,7 +10,7 @@ app = {
   parrot: 0,
   idParrot:0,
   state: false,
-  countdown:35,
+  countdown:40,
   init() {
     app.startGame()
     
@@ -99,11 +99,13 @@ app = {
 
   },
   newParrot() {
-   
-    var randomNumber = Math.floor(Math.random()*16); //new number - while loop used in order to select numbers which are still in the game
+    
+    app.numSelected.textContent = ''
+    if(app.countdown>5) { //no new parrot during the last 5sec...
+      var randomNumber = Math.floor(Math.random()*16); //new number - while loop used in order to select numbers which are still in the game
     app.numSelected.textContent = app.number[randomNumber]
     while(app.numSelected.textContent < ((40 - app.countdown)/10)+0.2) {
-      randomNumber = Math.floor(Math.random()*20)
+      randomNumber = Math.floor(Math.random()*21)
       app.numSelected.textContent = app.number[randomNumber]
 
     }
@@ -117,6 +119,9 @@ app = {
     app.numSelected.parentElement.prepend(elem)
     var imgs = document.querySelectorAll('.parrot__img')
     app.selectParrot() //this is mandatory because we have to apply an eventlistener on new parrot
+
+    }
+    
     
   }, 
 
