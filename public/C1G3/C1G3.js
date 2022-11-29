@@ -10,7 +10,7 @@ app = {
   parrot: 0,
   idParrot:0,
   state: false,
-  countdown:40,
+  countdown:35,
   init() {
     app.startGame()
     
