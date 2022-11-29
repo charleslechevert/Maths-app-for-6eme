@@ -86,7 +86,6 @@ app = {
             modalEndGame(app.countScore);
             var input = document.querySelector('.hiddenInput');
             input.value = app.countScore
-            console.log(input.value)
             document.score__form.submit();
             
         } else {

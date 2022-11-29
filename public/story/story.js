@@ -5,14 +5,13 @@ app = {
     counter:0,
     stories : document.querySelectorAll('#story'),
     init() {
-        console.log(app.stories.length)
         addEventListener('load', app.story)
         
 
     },
     story() {
         app.stories[0].style.display = 'block'
-
+        document.body.style.height = window.innerHeight;
         var inst = setInterval(app.change, 6000);
     },
 

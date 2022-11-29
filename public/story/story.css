@@ -122,10 +122,11 @@ body p:after {
   width: 100vw;
   height: 40vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 #story {
-  position: absolute;
   display: none;
 }

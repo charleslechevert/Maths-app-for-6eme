@@ -16,8 +16,8 @@ const gameController = {
       res.render(`${gameID}`, {gameID, game, score });
     },
     async addRegister(req,res) {
-      req.body.player_id = req.session.playerId;
-      console.log(req.body)
+      if(req.session.playerId) {
+        req.body.player_id = req.session.playerId;
       try {
         await Register.create(req.body);
         // Si mon level est bien créer, je redirige sur ma page en GET /levels
@@ -27,8 +27,10 @@ const gameController = {
         res.redirect('/');
       }
 
-
     }
+
+      }
+      
 
   };
   
