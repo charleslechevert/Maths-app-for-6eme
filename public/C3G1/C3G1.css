@@ -69,9 +69,11 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 95vw;
+    max-width: 800px;
     justify-content: center;
     align-items:center
+
     
 }
 
@@ -87,8 +89,6 @@ main {
     border:3px solid rgb(6, 53, 11);
     background-color: rgb(57, 54, 51);
     color: white;
-    font-family: 'Press Start 2P', cursive;
-    
 
 }
 

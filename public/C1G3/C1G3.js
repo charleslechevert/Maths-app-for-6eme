@@ -103,7 +103,7 @@ app = {
     var randomNumber = Math.floor(Math.random()*16); //new number - while loop used in order to select numbers which are still in the game
     app.numSelected.textContent = app.number[randomNumber]
     while(app.numSelected.textContent < ((40 - app.countdown)/10)+0.2) {
-      randomNumber = Math.floor(Math.random()*16)
+      randomNumber = Math.floor(Math.random()*20)
       app.numSelected.textContent = app.number[randomNumber]
 
     }

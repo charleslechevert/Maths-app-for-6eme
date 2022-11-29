@@ -169,9 +169,10 @@ app = {
         
         //put the value in an array and shuffle it randomly 
         var numbers = [number1,number2,number3]
+        console.log(numbers)
 
-        console.log(document.getElementById(app.leftPosition).style.backgroundImage !== 'url(/C3G3/pavement.png)' || document.getElementById(app.rightPosition).style.backgroundImage !== 'url(/C3G3/pavement.png)')
-        if(document.getElementById(app.leftPosition).style.backgroundImage !== 'url("pavement.png")' || document.getElementById(app.rightPosition).style.backgroundImage !== 'url("/C3G3/pavement.png")') {
+        if(document.getElementById(app.leftPosition).style.backgroundImage !== 'url("/C3G3/pavement.png")' || document.getElementById(app.rightPosition).style.backgroundImage !== 'url("/C3G3/pavement.png")') {
+            console.log('through')
             numbers.pop() //remove an option if one pavement is gone
         }
 
