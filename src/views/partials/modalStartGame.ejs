@@ -10,7 +10,15 @@
     <% if(playerId) { %>
         <div class="modal__record-container--start">
             <p class="modal__record-pseudo--start"><%= pseudo %></p>
-            <p class="modal__record-text--start">TOP 1 : <%= score.max %></p>
+            
+            <p class="modal__record-text--start">RECORD : 
+                <% if(score.max) { %>
+                   <%= score.max %>
+                <% } else { %>
+                    0
+                <% } %>
+                 
+                </p>
         </div>
        
     <% } else { %>

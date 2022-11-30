@@ -18,6 +18,7 @@ app = {
                 app.generatePad()
                 app.giveAnswer()
                 app.drag()
+                document.querySelector('.container').style.display = 'flex';
         
             }
         })
@@ -28,6 +29,7 @@ app = {
 
 
         app.randomSize = Math.floor(Math.random() * (8 - 4) + 4)
+        document.querySelector('.bubble').textContent = `Quel est le reste de la division entre le nombre des fruits et ${app.randomSize}?`
         if(window.screen.width < 500) { //Manage responsivness (if phone we are in VW whereas in laptop we are in px)
             var sizeCell = (100 / app.randomSize)
             var sizeCellVwPx = sizeCell + 'vw'
