@@ -10,6 +10,9 @@ const games = require('../data/games');
 const router = Router()
 
 router.get("/", mainController.renderHomePage);
+router.get("/about", mainController.renderAboutPage);
+router.get("/credit", mainController.renderCreditPage);
+
 router.get("/signup", adminController.renderSignupPage)
 router.post("/signup", adminController.addPlayer)
 
