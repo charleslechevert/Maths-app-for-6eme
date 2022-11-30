@@ -12,7 +12,7 @@ app = {
     generateNumber() {
         for(let i =1;i<8;i++) {
         randomValue = Math.floor(Math.random()*18);
-        document.getElementById("random_digit" + i).innerHTML = values[randomValue];
+        document.getElementById("random_digit" + i).textContent = values[randomValue];
         digit[i-1]= values[randomValue];
     }
 
@@ -20,7 +20,7 @@ app = {
     getvalue1() {
         var playerDigit = 0;
         document.getElementById('random_digit1').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[0]==false && app.doubleClick[0]==false) {
                 app.doubleClick[0] = true;
                 if (playerDigit == 0) {
@@ -35,7 +35,7 @@ app = {
                     }
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
 
         })
         
@@ -44,7 +44,7 @@ app = {
     getvalue2() {
         var playerDigit = 0;
         document.getElementById('random_digit2').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[1]==false && app.doubleClick[1]==false) {
                 app.doubleClick[1] = true;
                 if (playerDigit == 0 && app.digit[0] == 0) {
@@ -59,13 +59,13 @@ app = {
                     }
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
         })
     },
     getvalue3() {
         var playerDigit = 0;
         document.getElementById('random_digit3').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[2]==false && app.doubleClick[2]==false) {
                 app.doubleClick[2] = true;
                 document.getElementById("random_digit3").style.color = 'darkred';
@@ -73,13 +73,13 @@ app = {
                     app.countScore--;
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
         })
     },
     getvalue4() {
         var playerDigit = 0;
         document.getElementById('random_digit4').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[3]==false && app.doubleClick[3]==false) {
                 app.doubleClick[3] = true;
                 if (playerDigit == 0 & app.digit[6] == 0 & app.digit[5] == 0 & app.digit[4] == 0) {
@@ -94,13 +94,13 @@ app = {
                     }
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
         })
     },
     getvalue5() {
         var playerDigit = 0;
         document.getElementById('random_digit5').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[4]==false && app.doubleClick[4]==false) {
                 app.doubleClick[4] = true;
                 if (playerDigit == 0 & app.digit[6] == 0 & app.digit[5] == 0) {
@@ -115,14 +115,14 @@ app = {
                     }
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
         })
     },
 
     getvalue6() {
         var playerDigit = 0;
         document.getElementById('random_digit6').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[5]==false && app.doubleClick[5]==false) {
                 app.doubleClick[5] = true;
                 if (playerDigit == 0 & app.digit[6] == 0) {
@@ -137,14 +137,14 @@ app = {
                     }
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
         })
     },
 
     getvalue7() {
         var playerDigit = 0;
         document.getElementById('random_digit7').addEventListener('click', (event)=> {
-            playerDigit = event.target.innerHTML;
+            playerDigit = event.target.textContent;
             if (clicked[6]==false && app.doubleClick[6]==false) {
                 app.doubleClick[6] = true;
                 if (playerDigit == 0) {
@@ -159,7 +159,7 @@ app = {
                     }
                 }
             }
-            document.getElementById("score").innerHTML = app.countScore;
+            document.getElementById("score").textContent = app.countScore;
         })
     
     },
@@ -168,7 +168,7 @@ app = {
         /*Generate all the digits */
         for(let i =1;i<8;i++) {
             app.randomValue = Math.floor(Math.random()*18);
-            document.getElementById("random_digit" + i).innerHTML = app.values[app.randomValue];
+            document.getElementById("random_digit" + i).textContent = app.values[app.randomValue];
             app.digit[i-1]= app.values[app.randomValue];
         }
     
@@ -224,7 +224,7 @@ app = {
     
     },
     timer() {
-        document.getElementById('countdown').innerHTML = app.countdown;
+        document.getElementById('countdown').textContent = app.countdown;
     
         if (app.countdown==0) {
             clearInterval(app.secondIntervall);

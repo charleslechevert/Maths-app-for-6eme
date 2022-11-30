@@ -18,16 +18,16 @@ app = {
 
   generateNumber() {
     var randomNumber = Math.floor(Math.random()*10);
-    document.getElementById('parrot1').innerHTML = app.number[randomNumber];
+    document.getElementById('parrot1').textContent = app.number[randomNumber];
 
     randomNumber = Math.floor(Math.random()*10);
-    document.getElementById('parrot2').innerHTML = app.number[randomNumber];
+    document.getElementById('parrot2').textContent = app.number[randomNumber];
 
     randomNumber = Math.floor(Math.random()*10);
-    document.getElementById('parrot3').innerHTML = app.number[randomNumber];
+    document.getElementById('parrot3').textContent = app.number[randomNumber];
 
     randomNumber = Math.floor(Math.random()*10);
-    document.getElementById('parrot4').innerHTML = app.number[randomNumber];
+    document.getElementById('parrot4').textContent = app.number[randomNumber];
   },
   selectParrot() {
     var imgs = document.querySelectorAll('.parrot__img')
@@ -144,7 +144,7 @@ app = {
 
   },
   timer() {
-    document.getElementById('countdown').innerHTML = app.countdown;
+    document.getElementById('countdown').textContent = app.countdown;
 
     if (app.countdown==0) {
       console.log('check')

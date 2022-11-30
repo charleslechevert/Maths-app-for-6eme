@@ -32,7 +32,7 @@ app = {
 
       },
       timer() {
-        document.getElementById('countdown').innerHTML = app.countdown;
+        document.getElementById('countdown').textContent = app.countdown;
     
         if (app.countdown==0) {
             clearInterval(app.secondIntervalls);

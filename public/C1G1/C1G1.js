@@ -42,7 +42,7 @@ app = {
             digit.splice(3,0,".");
             numberString = digit.join("");
             numberFloat[j-1] = parseFloat(numberString)
-            document.getElementById("random_value" + j).innerHTML= numberString;
+            document.getElementById("random_value" + j).textContent= numberString;
         
         
         
@@ -53,8 +53,6 @@ app = {
         
     },
     checkValue() {
-        console.log(app.playerValue)
-        console.log(app.correctAnswer)
         if(app.playerValue==app.correctAnswer) {
             app.countScore++;
             document.getElementById('score').textContent = app.countScore;
@@ -68,7 +66,7 @@ app = {
         var numbers = document.querySelectorAll('.box__number')
         for(let i =0;i<numbers.length;i++) {
             numbers[i].addEventListener('click', (event) => {
-                app.playerValue = event.currentTarget.innerHTML
+                app.playerValue = event.currentTarget.textContent
                 console.log(event.currentTarget)
                 app.checkValue(app.playerValue, app.correctAnswer);
                 app.reset();
@@ -79,7 +77,7 @@ app = {
 
     }, 
     timer() {
-        document.getElementById("countdown").innerHTML = app.countdown;
+        document.getElementById("countdown").textContent = app.countdown;
         
         if (app.countdown==0) {
             clearInterval(app.secondIntervall);

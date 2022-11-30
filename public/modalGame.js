@@ -12,6 +12,7 @@ document.querySelector('#modal__again').addEventListener('click',()=> {
 
 /*
 
+
 mouseCursor = document.querySelector('.cursor')
 
 window.addEventListener("mousemove",cursor);

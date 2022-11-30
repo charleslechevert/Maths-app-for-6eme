@@ -1,47 +1,9 @@
-html {
-    font-family: 'Krona One', sans-serif;
-    
-}
-
-.menu {
-    background-color: rgb(57, 54, 54);
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    color : white;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.menu__start {
-    font-size: 3vh;
-    color: white;
-    text-transform: uppercase;
-    padding: 1rem;
-    font-weight: bold;
-
-}
-
-.menu__score {
-    font-size: 3vh;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 1rem;
-
-    
-}
-
-.menu__countdown {
-    font-size: 3vh;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 1rem;
-}
 
 /*_____________________________________________________________________*/
+
+main {
+    width: 100vw;
+}
 
 .sea {
     width: 100vw;
@@ -65,7 +27,8 @@ html {
     width: 100%;
     font-size: 4vh;
     text-align: center;
-    color:rgb(57, 54, 54);
+    color:rgb(68, 68, 68);
+    text-shadow: 2px 2px rgb(58,58,58);
 }
 
 .block {

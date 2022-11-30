@@ -8,11 +8,13 @@
     border: 3px solid white;
     z-index: 1000000000;
     background-color: rgb(58,58,58);
+    max-width: 90vw;
 }
 
 .help_back {
     display: block;
     width: 100%;
+    max-width: 90vw;
     text-decoration: none;
     color: white;
     background-color: rgb(58,58,58);
@@ -25,4 +27,5 @@
 .help_gif {
 
     border-radius:15px 15px 0 0;
+    max-width: 90vw;
 }
