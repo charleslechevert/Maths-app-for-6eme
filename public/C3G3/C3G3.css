@@ -17,7 +17,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 90vh;
+    min-height: 90vh;
     user-select:none;
     -ms-user-selec:none;
     -moz-user-select:none;
