@@ -7,7 +7,7 @@ html {
 .main {
     height: 90vh;
     width: 100vw;
-    background-image: url('floor.png');
+    background-image: url('floor.jpg');
     background-size: auto 100%;
     background-position: 35% 0;
     display: flex;
