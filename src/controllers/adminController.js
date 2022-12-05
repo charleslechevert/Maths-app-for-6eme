@@ -162,7 +162,7 @@ const adminController = {
       service: 'gmail',
       auth: {
         user: 'charleslechevert@gmail.com',
-        pass: 'lnnrpvstebwpavsv'
+        pass: process.env.GOOGLEPWD
       },
       tls: {
         rejectUnauthorized: false
