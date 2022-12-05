@@ -162,7 +162,7 @@ const adminController = {
       service: 'gmail',
       auth: {
         user: 'charleslechevert@gmail.com',
-        pass: 'zvvlqrhpdccczrwd'
+        pass: 'lnnrpvstebwpavsv'
       },
       tls: {
         rejectUnauthorized: false
