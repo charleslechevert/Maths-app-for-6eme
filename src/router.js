@@ -22,6 +22,11 @@ router.post("/signin", adminController.signinPlayer)
 router.get("/signout", adminController.renderSignOutPage)
 router.post("/signout", adminController.signOutPlayer)
 
+router.get("/forgetpwd", adminController.renderForgetPwdPage)
+router.post("/forgetpwd", adminController.forgetPwd)
+router.get("/forgetpwd/:id/:token", adminController.forgetPwdClick)
+router.post("/forgetpwd/:id/:token", adminController.forgetPwdReset)
+
 
 
 router.get("/chapter/:chapter", menuController.renderMenuPage)

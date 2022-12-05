@@ -102,7 +102,25 @@ html {
     width: 85%;
     text-decoration: none;
     text-align: center;
- 
+
+}
+
+.sign__forgetpwd {
+
+    background-color: rgb(55, 55, 55);
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 1.5vh;
+    border: none;
+    padding: 0.6rem 1rem;
+    box-shadow: 3px 3px darkgray;
+    max-width : 400px;
+    width: 85%;
+    text-decoration: none;
+    text-align: center;
 }
 
 .sign__title {

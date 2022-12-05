@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/admin/style.css">
+
+    
+    <section class = "sign">
+        <form method="post">
+        <div class="sign__container">
+            
+                <h2 class="sign__title">Mot de passe oublié</h2>
+                <% if (locals.confMessage) { %>
+                    <p class="sign__error" style="color : rgb(39, 110, 75)"><%=confMessage%></p>
+                <% } else { %>
+                <label class="sign__label" for="email">Email</label>
+                <input class="sign__input" type="email" name="email" id="">
+                <% if(locals.errorMessage) { %>
+                    <p class="sign__error"><%=errorMessage%></p>
+                <% } %>  
+                <button class="sign__validate">Valider</button>
+                <% } %>
+        </div>
+    </form>
+
+          
+    </section>
+        
+
+    
+</body>
+</html>

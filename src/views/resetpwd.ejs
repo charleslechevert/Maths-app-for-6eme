@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/admin/style.css">
+
+    
+    <section class = "sign">
+        <form method="post">
+        <div class="sign__container">
+            
+                
+                <% if(locals.confMessage) { %>
+                   <p class="sign__error" style="color : rgb(39, 110, 75)"><%=confMessage%></p> 
+                <% } else { %>
+                    <h2 class="sign__title">Réinitialiser le mot de passe - <%= player.pseudo%></h2>
+                    <label class="sign__label" for="password">Mot de passe</label>
+                    <input class="sign__input" type="password" name="password" id="">
+                    <label class="sign__label" for="passwordConf">Confirmation du mot de passe</label>
+                    <input class="sign__input" type="password" name="passwordConf" id="">
+                    <% if(locals.errorMessage) { %>
+                        <p class="sign__error"><%=errorMessage%></p>
+                    <% } %>
+                    <button class="sign__validate">Valider</button>
+                <% } %>
+                
+        </div>
+    </form>
+
+          
+    </section>
+        
+
+    
+</body>
+</html>
