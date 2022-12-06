@@ -5,6 +5,7 @@ const menuController = require("./controllers/menuController");
 const storyController = require("./controllers/storyController");
 const gameController = require("./controllers/gameController");
 const statsController = require("./controllers/statsController");
+const classController = require("./controllers/classController");
 const games = require('../data/games');
 
 const router = Router()
@@ -38,6 +39,11 @@ router.get("/game/:game", gameController.renderGamePage)
 router.get("/stats", statsController.renderStatsPage)
 
 router.post("/register", gameController.addRegister)
+
+router.get("/class", classController.renderMenuPage)
+router.get("/enrollclass", classController.renderEnrollPage)
+router.get("/createclass", classController.renderCreatePage)
+router.post("/createclass", classController.createClass)
 
 
 

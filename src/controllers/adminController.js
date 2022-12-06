@@ -53,7 +53,7 @@ const adminController = {
         return;
       }
 
-      if(req.body.password < 8) {
+      if(req.body.password.length < 7) {
         res.render('signup', {
           errorMessage: 'Le mot de passe doit comporter 8 caractères minimum'
         });
@@ -214,6 +214,14 @@ const adminController = {
       });
       return;
     }
+
+    if(req.body.password.length < 7) {
+      res.render('resetpwd', {
+        errorMessage: 'Le mot de passe doit comporter 8 caractères minimum'
+      });
+      return;
+    }
+
 
     const passwordHashed = await bcrypt.hash(req.body.password, 10);
     req.body.password = passwordHashed;

@@ -1,13 +1,14 @@
 
 const Player = require("./player");
 const Register = require("./register");
+const Class = require("./class");
 
-// Level
+//Player&Register
 Player.hasMany(Register, {
   foreignKey: 'player_id',
   as: 'register'
 });
-// Question
+
 Register.belongsTo(Player, {
   foreignKey: {
     name: 'player_id',
@@ -16,8 +17,26 @@ Register.belongsTo(Player, {
   as: 'player'
 });
 
+//Player&Class
+Player.hasMany(Class, {
+  foreignKey: 'player_id',
+  as: 'class'
+});
+
+Class.belongsTo(Player, {
+  foreignKey: {
+    name: 'player_id',
+  },
+  as: 'player2'
+});
+
+
+
+
+
 module.exports = {
   Player,
-  Register
+  Register,
+  Class
 }
 
