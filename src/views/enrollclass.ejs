@@ -1,16 +1,39 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/class/class.css">
+<script src="/class/class.js" defer></script>
 <body>
 <main >
     <section class="class__container">
-        <form class="class__enroll-form" action="post">
-            <label class="class__enroll-label" for="code">Rentre ton code secret</label>
-            <p class="class_enroll-descr">Rentre le code communiqué ci-dessous afin de rejoindre l'équipage!</p>
-            <input class="class__enroll-input" type="text">
-            <input class="class__enroll-submit" type="submit">
-        </form>
+        <div class="class__create-container">
+            <form class="class__enroll-form" method="post">
+                <% if(!player.classroom) { %>
+                    <label class="class__enroll-title" for="code">Rentre ton code secret</label>
+                    <p class="class_enroll-descr">Rentre le code communiqué ci-dessous afin de rejoindre l'équipage!</p>
+                    <input class="class__enroll-input" type="text" name="classroom">
+                <% if(locals.errorMessage) { %>
+                    <p class="class_enroll-errmsg"><%= errorMessage %></p>
+                <% } %>
+                   <input class="class__enroll-submit" type="submit">
+                <% } else { %>
+                    <p class="class__create-descr">Tu fais partie de la classe <%= player.classroom %> </p>
+                    <p class="class__enroll-quit" id="class-quit">Quitter la classe </p>
+                    
+                    
+                <% } %>
+            </form>        
+        </div>
 
     </section>
+
+    <div class="class__modal-container">
+        <form method="post" action="/enrollclass/delete">
+        <p class="class__signout-question">Voulez-vous vraiment quiiter la classe?</p>
+        <div class="class__signout-container">
+            <button class="class__signout-yes" type="submit">Oui</button>
+            <p class="class__signout-no">Non</p>
+        </div>
+        </form>
+    </div>
 </main> 
 </body>
 </html>

@@ -5,20 +5,36 @@
     <section class="class__container">
         <div class="class__create-container">
         <form class="class__enroll-form" method="post">
-            <label class="class__enroll-label" for="code">Créer une classe</label>
+            <label class="class__enroll-title" for="code">Créer une classe</label>
             <p class="class_enroll-descr">Pour créer une classe il suffit de rentrer un code à 6 caractères ci-dessous (exemple : ABC6E1). Les élèves devront ensuite entrer ce code dans la section "rejoindre une classe". Vous pourrez ensuite suivre le progrès de l'ensemble de vos élèves.</p>
-            <input class="class__enroll-input" type="text" name="code">
+            <div class="class__labelinput-container">
+                <label class="class__enroll-label" for="code">Code</label>
+                <input class="class__enroll-input" type="text" name="code">
+            </div>
+            <div class="class__labelinput-container">
+                <label class="class__enroll-label" for="name">Nom de la classe</label>
+                <input class="class__enroll-input" type="text" name="name">
+            </div> 
             <% if(locals.errorMessages) { %>
                 <p class="class_enroll-descr">Le code doit comporter exactement 6 caractères</p>
             <% } %>
             <input class="class__enroll-submit" placeholder="Le code c'est ici!" type="submit" value = "créer">
         </form>
         </div>
+
         <div class="class__create-container">
-            
-            <h2 class="class__enroll-label">Mes classes</h2>
+            <h2 class="class__enroll-title">Mes classes</h2>
+            <% if(!locals.classrooms || locals.classrooms.length ==0) { %>
             <p class="class_enroll-descr">Vous n'avez pas encore de classe</p>
-            </div>
+            <% } else { %>
+                <% for(classroom of classrooms) { %>
+                <a href="/createclass/<%= classroom.player_id %>/<%=classroom.code%>" class = "class__classes-container">
+                    <p><%= classroom.name %></p>
+                    <p><%= classroom.code %></p>
+                </a>
+                
+            <%  } } %>
+        </div>
     </section>
 </main> 
 </body>

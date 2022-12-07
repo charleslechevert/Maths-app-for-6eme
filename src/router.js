@@ -42,9 +42,12 @@ router.post("/register", gameController.addRegister)
 
 router.get("/class", classController.renderMenuPage)
 router.get("/enrollclass", classController.renderEnrollPage)
+router.post("/enrollclass", classController.enrollClass)
+router.post("/enrollclass/delete",classController.deleteClass)
+
 router.get("/createclass", classController.renderCreatePage)
 router.post("/createclass", classController.createClass)
-
+router.get("/createclass/:id/:code", classController.renderClassPage)
 
 
 

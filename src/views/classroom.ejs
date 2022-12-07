@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/class/class.css">
+<script src="/class/classroom.js" defer></script>
+<body>
+<main >
+    <section>
+        <div class="classroom__gamelist-container">
+            <select class="classroom__gamelist">
+                <% for (game of games) { %>
+                <option value=<%=game.id%>>Chapitre <%=game.chapter%> - <%=game.title%></option>
+                <% } %>
+            </select>
+        </div>
+    </section>
+    <section class="classroom__scores-container">
+        <div>
+            <% for (score of scores) { %>
+                <div class="classroom__score-row">
+                    <p class="classroom__score-CG"><%=score.game_id%></p>
+                    <p><%=score.fname%></p>
+                    <p><%=score.pseudo%></p>
+                    <p><%=score.max%></p>
+                </div>
+            <% } %>
+        </div>
+
+    </section>
+</main> 
+</body>
+</html>
+

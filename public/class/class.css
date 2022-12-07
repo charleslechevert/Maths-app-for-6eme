@@ -73,10 +73,11 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    min-height: 15vh;
 
 }
 
-.class__enroll-label {
+.class__enroll-title {
     text-transform: uppercase;
     font-size: 2.7vh;
     text-align: center;
@@ -86,12 +87,35 @@ main {
 
 }
 
+.class__enroll-label {
+    text-transform: uppercase;
+    font-size: 1.5vh;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px black;
+    width: 35%;
+
+}
+
 .class__enroll-input {
     border-radius: 7px;
     border : 2px solid black;
     height: 4vh;
     margin-bottom:2vh;
     box-shadow: 4px 4px black;
+    background-color: white;
+}
+
+.class__enroll-quit {
+    border-radius: 7px;
+    border : 2px solid black;
+    vertical-align:middle;
+    box-shadow: 4px 4px black;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 2vh 1vh;
+    margin-bottom: 2vh;
+
 }
 
 .class__enroll-submit {
@@ -127,4 +151,157 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin : 2vh 0;
+}
+
+.class__labelinput-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.class__classes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh;
+    background-color: white;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='180' height='45' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 1)'/><path d='m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z'  stroke-width='1' stroke='none' fill='hsla(187, 39%, 86%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    text-transform: uppercase;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    border-radius: 7px;
+    width: 80%;
+    margin-bottom: 2vh;
+    min-height: 8vh;
+    font-size: 2vh;
+    text-decoration: none;
+    color: black;
+}
+
+.class_enroll-errmsg {
+    color: rgb(202, 86, 86);
+    font-size: 1.7vh;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+}
+
+.class__create-descr {
+    text-transform: uppercase;
+    font-size: 1.5vh;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px black;
+    padding: 1vh;
+}
+
+.class__modal-container {
+    background-color: rgb(58,58,58);
+    width: 80vw;
+    max-width: 500px;
+    height: 32vh;
+    position: absolute;
+    transform : translate(-50%,-50%);
+    top : 50%;
+    left : 50%;
+    border-radius: 6px;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    animation : appear 350ms ease-in;
+    box-shadow: 12px 12px 2px 1px rgba(46, 46, 65, 0.2);
+    z-index: 100;
+    font-size: 2vh;
+    text-transform: uppercase;
+    display: none;
+}
+
+.class__signout-yes {
+    background-color: rgb(162, 225, 154);
+    border: none;
+    box-shadow: 2px 2px rgb(56, 54, 54);
+    border-radius: 7px;
+    padding: 1vh;
+    color:  white;
+    font-family: 'Krona One', sans-serif;
+    font-size: 2vh;
+    box-shadow: 3px 3px white;
+    text-transform: uppercase;
+
+}
+
+.class__signout-no {
+    text-decoration: none;
+    background-color: rgb(226, 116, 108);
+    border: none;
+    box-shadow: 2px 2px rgb(56, 54, 54);
+    border-radius: 7px;
+    padding: 1.2vh 1vh 0.8vh 1vh;
+    color:  white;
+    box-shadow: 3px 3px white;
+    font-size: 2vh;
+}
+
+.class__signout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vh;
+}
+
+.class__signout-question {
+    text-align: center;
+
+}
+
+.classroom__gamelist-container {
+    padding:2vh;
+    display: block;
+    text-align:center;
+    
+}
+
+.classroom__gamelist {
+    border-radius: 7px;
+    text-transform: uppercase;
+    border: none;
+    height: 5vh;
+    font-family: 'Krona One', sans-serif;
+    text-align: center;
+    box-shadow: 3px 3px rgb(56, 54, 54);
+    
+}
+
+.classroom__scores-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.classroom__score-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    max-width: 800px;
+    background-color: rgba(0,0,0,0.65);
+    padding:1vh;
+    border-radius: 7px;
+    margin-bottom: 2vh;
+    height: 4vh;
+    text-transform: uppercase;
+    color: white;
+    
+}
+
+.classroom__score-CG{
+    display: none;
 }

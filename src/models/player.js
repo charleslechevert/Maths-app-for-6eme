@@ -94,6 +94,9 @@ Player.init({
     type: DataTypes.TEXT,
     allowNull: false,
   },
+  classroom: {
+    type: DataTypes.TEXT,
+  },
   // Propriété calculer
   fullname: {
     type: DataTypes.VIRTUAL,

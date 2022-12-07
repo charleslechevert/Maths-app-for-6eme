@@ -11,7 +11,7 @@ const statsController = {
           group: ["game_id"],
           raw: true,
       });
-      console.log(registers.find(register => register.game_id == games[0].id))
+      
         res.render("stats",{registers, games});
       } else {
         res.redirect("/");

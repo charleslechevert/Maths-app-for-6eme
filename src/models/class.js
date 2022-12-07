@@ -8,7 +8,11 @@ Class.init({
   code: {
     type: DataTypes.TEXT,
     allowNull: false
-  }
+  },
+  name: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
 }, {
   sequelize,
   tableName: 'class'
